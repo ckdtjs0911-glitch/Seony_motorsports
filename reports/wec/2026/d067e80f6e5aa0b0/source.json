@@ -1,0 +1,27 @@
+{
+  "event": "07_BARCELONA-CATALUNYA",
+  "session": "202610171240_Free Practice 3 - HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Free Practice 3 - HYPERCAR_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171240_Free%20Practice%203%20-%20HYPERCAR/03_Classification_Free%20Practice%203%20-%20HYPERCAR_Final.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 3 - HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171240_Free%20Practice%203%20-%20HYPERCAR/23_Analysis_Free%20Practice%203%20-%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 3 - HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171240_Free%20Practice%203%20-%20HYPERCAR/26_Weather_Free%20Practice%203%20-%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Free Practice 3 - HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171240_Free%20Practice%203%20-%20HYPERCAR/99_TrackLimits_Free%20Practice%203%20-%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 3 - HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171240_Free%20Practice%203%20-%20HYPERCAR/23_Analysis_Free%20Practice%203%20-%20HYPERCAR.CSV"
+  },
+  "sha256": "22f91933a1b3a8bf42c090446a7e5659fbb69b53d3639c2034154e837b441a05"
+}

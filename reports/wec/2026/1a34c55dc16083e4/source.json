@@ -1,0 +1,27 @@
+{
+  "event": "04_SAO PAULO",
+  "session": "202607101550_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607101550_Free%20Practice%202/03_Classification_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607101550_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607101550_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Track Limits.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607101550_Free%20Practice%202/99_Track%20Limits.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607101550_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "addc445cc806d592d0c320138520a037e1e8b22395a7786b8560cc7935256ff1"
+}

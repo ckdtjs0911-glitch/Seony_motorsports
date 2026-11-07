@@ -1,0 +1,27 @@
+{
+  "event": "04_SAO PAULO",
+  "session": "202607111510_Qualifying HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111510_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111510_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111510_Qualifying%20HYPERCAR/26_Weather_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111510_Qualifying%20HYPERCAR/99_TrackLimits_Qualifying%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111510_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+  },
+  "sha256": "bfdeb74f6973b27c27ad92b82ca2b2e0bbb903858bc8dba3ac4e751bc7ada90a"
+}

@@ -1,0 +1,27 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606101845_Qualifying LMP2-LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101845_Qualifying%20LMP2-LMGT3/03_Classification_Qualifying%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Qualifying LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101845_Qualifying%20LMP2-LMGT3/23_AnalysisEnduranceWithSections_Qualifying%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101845_Qualifying%20LMP2-LMGT3/23_Analysis_Qualifying%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101845_Qualifying%20LMP2-LMGT3/26_Weather_Qualifying%20LMP2-LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMP2-LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101845_Qualifying%20LMP2-LMGT3/23_Analysis_Qualifying%20LMP2-LMGT3.CSV"
+  },
+  "sha256": "8e77bd191649f27e977c7849164e3542d706ea6faace37e41903c29c069ed83a"
+}

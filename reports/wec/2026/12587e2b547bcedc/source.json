@@ -1,0 +1,27 @@
+{
+  "event": "04_SAO PAULO",
+  "session": "202607111430_Qualifying LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111430_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111430_Qualifying%20LMGT3/26_Weather_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "TrackLimits_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111430_Qualifying%20LMGT3/99_TrackLimits_Qualifying%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+  },
+  "sha256": "1e8d2f8ad3c3a9a892236deb1f82acd34b0829f1c45a9d7fefea20c2c5b1348e"
+}

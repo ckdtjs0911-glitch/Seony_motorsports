@@ -1,0 +1,27 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606101410_Free Practice 1",
+  "files": [
+    {
+      "name": "Classification_Free Practice 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101410_Free%20Practice%201/03_Classification_Free%20Practice%201.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Free Practice 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101410_Free%20Practice%201/23_AnalysisEnduranceWithSections_Free%20Practice%201.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101410_Free%20Practice%201/23_Analysis_Free%20Practice%201.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101410_Free%20Practice%201/26_Weather_Free%20Practice%201.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 1.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101410_Free%20Practice%201/23_Analysis_Free%20Practice%201.CSV"
+  },
+  "sha256": "918a32481064858fbe4dd8aa33b4d04d573a09741e2204bf9c509b597273cfbb"
+}

@@ -1,0 +1,27 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609051600_Hyperpole HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Hyperpole HYPERCAR_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051600_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR_Final.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole  HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051600_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051600_Hyperpole%20HYPERCAR/26_Weather_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051600_Hyperpole%20HYPERCAR/99_TrackLimits_Hyperpole%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole  HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051600_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20%20HYPERCAR.CSV"
+  },
+  "sha256": "1eacbf4064c96bb67b2ca310dc3a17f0c9d28392820d9e0691f01763f6c29fec"
+}

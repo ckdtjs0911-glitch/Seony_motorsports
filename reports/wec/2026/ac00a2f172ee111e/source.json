@@ -1,0 +1,23 @@
+{
+  "event": "02_SPA FRANCORCHAMPS",
+  "session": "202605081430_Qualifying LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081430_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081430_Qualifying%20LMGT3/26_Weather_Qualifying%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+  },
+  "sha256": "47527ec5cb9e9da16a92058ecd40c7e29a5122d87946e9005fb65326569db9f2"
+}

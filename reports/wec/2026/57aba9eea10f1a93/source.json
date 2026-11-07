@@ -1,0 +1,23 @@
+{
+  "event": "02_SPA FRANCORCHAMPS",
+  "session": "202605081455_Hyperpole LMGT3",
+  "files": [
+    {
+      "name": "Classification_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081455_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081455_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081455_Hyperpole%20LMGT3/26_Weather_Hyperpole%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081455_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+  },
+  "sha256": "ef69181e6d742e6de15c78029e507eb662adbec9f2fc459a8c2499e68148fdd6"
+}

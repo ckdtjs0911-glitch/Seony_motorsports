@@ -1,0 +1,23 @@
+{
+  "event": "02_SPA FRANCORCHAMPS",
+  "session": "202605071540_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605071540_Free%20Practice%202/03_Classification_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605071540_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605071540_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605071540_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "4cafcf50c379d363dedb16671f18d8a819b7159088dc4c71ab0906440f36a000"
+}

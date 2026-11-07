@@ -1,0 +1,23 @@
+{
+  "event": "04_SAO PAULO",
+  "session": "202607111530_Hyperpole HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111530_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111530_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111530_Hyperpole%20HYPERCAR/26_Weather_Hyperpole%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111530_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+  },
+  "sha256": "04770594d66489858ae5df4a43ea53f754d2cb9b03138e8c20a477ca69b844b2"
+}

@@ -1,0 +1,23 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609051500_Qualifying LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMGT3_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051500_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3_Final.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051500_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051500_Qualifying%20LMGT3/26_Weather_Qualifying%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051500_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+  },
+  "sha256": "bd4beaf08b7a6c7de7732144e21f0af8035406f1e89c4d7b2ca618721bd9ab86"
+}

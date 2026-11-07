@@ -1,0 +1,27 @@
+{
+  "event": "07_BARCELONA-CATALUNYA",
+  "session": "202610161630_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610161630_Free%20Practice%202/03_Classification_Free%20Practice%202_Final.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610161630_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610161630_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "TrackLimits_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610161630_Free%20Practice%202/99_TrackLimits_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610161630_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "c25d937a458153a5d750d41a4af8fd69d54ba5ba5c6ae1cbb97f5f1a82969609"
+}

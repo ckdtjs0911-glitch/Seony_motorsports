@@ -1,0 +1,23 @@
+{
+  "event": "01_IMOLA",
+  "session": "202604181450_Hyperpole LMGT3",
+  "files": [
+    {
+      "name": "Classification_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181450_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181450_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181450_Hyperpole%20LMGT3/26_Weather_Hyperpole%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181450_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+  },
+  "sha256": "39e3f1f94b38079fe413bcbce51cc1fcf270652a2786eab1020ac38dca94482a"
+}

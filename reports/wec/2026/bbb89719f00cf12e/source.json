@@ -1,0 +1,43 @@
+{
+  "event": "02_SPA FRANCORCHAMPS",
+  "session": "202605091400_Race",
+  "files": [
+    {
+      "name": "Classification_Race_Hour 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/01_Hour%201/03_Classification_Race_Hour%201.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/02_Hour%202/03_Classification_Race_Hour%202.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/03_Hour%203/03_Classification_Race_Hour%203.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 4.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/04_Hour%204/03_Classification_Race_Hour%204.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 5.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/05_Hour%205/03_Classification_Race_Hour%205.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/06_Hour%206/03_Classification_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Analysis_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Weather_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/06_Hour%206/26_Weather_Race_Hour%206.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Race_Hour 6.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605091400_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+  },
+  "sha256": "81f187b5b029674b3e16224028dd3380385da681eba026b9d72da0510462fb67"
+}

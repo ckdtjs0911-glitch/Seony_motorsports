@@ -1,0 +1,27 @@
+{
+  "event": "04_SAO PAULO",
+  "session": "202607111450_Hyperpole LMGT3",
+  "files": [
+    {
+      "name": "Classification_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111450_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111450_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111450_Hyperpole%20LMGT3/26_Weather_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "TrackLimits_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111450_Hyperpole%20LMGT3/99_TrackLimits_Hyperpole%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/04_SAO%20PAULO/666_FIA%20WEC/202607111450_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+  },
+  "sha256": "58e0ed47f3087a309de4e2f37f697a7a523f8bdcf765dabccef09cc774013e64"
+}
