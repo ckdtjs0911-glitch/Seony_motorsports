@@ -1,0 +1,27 @@
+{
+  "event": "08_AUTODROMO NAZIONALE DI MONZA",
+  "session": "202611061430_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/03_Classification_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "TrackLimits_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/99_TrackLimits_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "881aa78d46871fa8503a840edc77ace3eecb1dcd12bbafb8bbb9af8268fe916f"
+}
