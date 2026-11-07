@@ -189,23 +189,32 @@ def render(entry, rows, sources, classification=None):
     body += '플래그는 결승선 통과 시점 정보이며 랩 전체의 그린 상태를 보장하지 않습니다. 연료·트래픽·타이어 보정 없음. '
     body += '피트 진입 수는 완료된 정차 횟수와 다르며 첫 출차의 PIT_TIME도 정차로 세지 않습니다.</p>'
     body += '<p>출처: ' + ' · '.join(f'<a href="{esc(s["url"], quote=True)}">{esc(s["name"])}</a>' for s in sources) + '</p>'
+    classes = sorted({r['CLASS'] for r in rows} | {r.get('CLASS', '') for r in (classification or [])})
+    body += '<div class="filters"><label>클래스 <select id="class-filter"><option value="">전체 클래스</option>'
+    body += ''.join(f'<option value="{esc(c, quote=True)}">{esc(c)}</option>' for c in classes if c)
+    body += '</select></label> <label>팀 <select id="team-filter"><option value="">전체 팀</option></select></label> '
+    body += '<label>검색 <input id="search" type="search" placeholder="차량 · 드라이버 · 팀"></label></div>'
+
+    def attrs(category, team, car):
+        return f' data-class="{esc(category, quote=True)}" data-team="{esc(team, quote=True)}" data-car="{esc(car, quote=True)}"'
+
     if classification:
         columns = ['POS', 'NUMBER', 'CLASS', 'TEAM', 'LAPS', 'TIME', 'GAP_FIRST', 'STATUS']
-        body += '<h2>공식 CSV 세션 결과</h2><p>기록 파일의 현재 순위입니다. 잠정/확정 여부는 원본 문서를 확인하세요. TIME은 세션별 공식 값 그대로 표시합니다.</p><section><table><thead><tr>'
+        body += '<h2>공식 CSV 세션 결과</h2><p>기록 파일의 현재 순위입니다. 잠정/확정 여부는 원본 문서를 확인하세요. TIME은 세션별 공식 값 그대로 표시합니다. 순위는 원본의 전체 순위이며, 필터 결과를 10대씩 표시합니다.</p><section><table id="classification"><thead><tr>'
         body += ''.join('<th>'+esc(c)+'</th>' for c in columns)+'</tr></thead><tbody>'
         for result in classification:
-            body += '<tr>'+''.join('<td>'+esc(result.get(c, ''))+'</td>' for c in columns)+'</tr>'
-        body += '</tbody></table></section>'
-    body += '<label>클래스/차량/드라이버 검색 <input id="search" type="search"></label><section><table><thead><tr>'
+            body += '<tr'+attrs(result.get('CLASS', ''), result.get('TEAM', ''), result.get('NUMBER', ''))+'>'+''.join('<td>'+esc(result.get(c, ''))+'</td>' for c in columns)+'</tr>'
+        body += '</tbody></table></section><nav aria-label="순위 페이지"><button id="rank-prev" type="button">이전 10대</button> <span id="rank-page" aria-live="polite"></span> <button id="rank-next" type="button">다음 10대</button></nav>'
+    body += '<h2>드라이버별 페이스</h2><section><table id="pace"><thead><tr>'
     body += ''.join(f'<th>{x}</th>' for x in ['클래스','차량','드라이버','팀','관측 랩','최속','중앙값','표본','피트 진입']) + '</tr></thead><tbody>'
     for s in summaries:
         vals = [s['category'],s['number'],s['driver'],s['team'],s['laps'],fmt(s['best']),fmt(s['median']),s['sample'],s['pit_in']]
-        body += '<tr>' + ''.join('<td>'+esc(str(v))+'</td>' for v in vals) + '</tr>'
-    body += '</tbody></table></section><h2>관측 주행 구간</h2><p>드라이버 교대 또는 CSV 피트 경계로 나눈 구간입니다. 공식 타이어 스틴트가 아닙니다.</p><section><table><thead><tr><th>차량</th><th>드라이버</th><th>랩 범위</th><th>유효 표본</th><th>중앙값</th></tr></thead><tbody>'
+        body += '<tr'+attrs(s['category'], s['team'], s['number'])+'>' + ''.join('<td>'+esc(str(v))+'</td>' for v in vals) + '</tr>'
+    body += '</tbody></table></section><h2>관측 주행 구간</h2><p>드라이버 교대 또는 CSV 피트 경계로 나눈 구간입니다. 공식 타이어 스틴트가 아닙니다.</p><section><table id="stints"><thead><tr><th>차량</th><th>드라이버</th><th>랩 범위</th><th>유효 표본</th><th>중앙값</th></tr></thead><tbody>'
     for car, stint in stints(rows):
         times = [r['seconds'] for r in stint if r['pace_eligible']]
         values = [car, stint[0]['DRIVER_NAME'], stint[0]['LAP_NUMBER']+'–'+stint[-1]['LAP_NUMBER'], len(times), fmt(statistics.median(times) if times else None)]
-        body += '<tr>'+''.join('<td>'+esc(str(v))+'</td>' for v in values)+'</tr>'
+        body += '<tr'+attrs(stint[0]['CLASS'], stint[0].get('TEAM', ''), car)+'>'+''.join('<td>'+esc(str(v))+'</td>' for v in values)+'</tr>'
     body += '</tbody></table></section><h2>차량별 랩타임</h2><p>가로: 랩 번호 · 세로: 랩타임(초), 아래쪽이 빠른 랩</p><select id="car">'
     for car in sorted({r['NUMBER'] for r in rows}):
         body += f'<option value="{esc(car, quote=True)}">#{esc(car)}</option>'
@@ -219,8 +228,34 @@ const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 100
 const maxLap=Math.max(...rows.map(r=>Number(r.LAP_NUMBER)),1),lo=Math.min(...rows.map(r=>r.seconds)),hi=Math.max(...rows.map(r=>r.seconds));
 for(const [x,y,text] of [[30,315,'Lap 0'],[900,315,'Lap '+maxLap],[1,25,hi.toFixed(1)+'s'],[1,290,lo.toFixed(1)+'s']]){const t=document.createElementNS(ns,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('fill','#edf2ff');t.textContent=text;svg.append(t)}
 for(const r of rows){const c=document.createElementNS(ns,'circle');c.setAttribute('cx',30+940*Number(r.LAP_NUMBER)/maxLap);c.setAttribute('cy',290-260*(r.seconds-lo)/(hi-lo||1));c.setAttribute('r',4);c.setAttribute('fill',r.pit_in||r.pit_seconds?'#ffad60':'#82d6ff');c.setAttribute('tabindex','0');const label=`${r.DRIVER_NAME} / Lap ${r.LAP_NUMBER}: ${r.LAP_TIME}`;c.setAttribute('aria-label',label);const t=document.createElementNS(ns,'title');t.textContent=label;c.append(t);svg.append(c)}box.append(svg)}
-document.querySelector('#car').addEventListener('change',draw);draw();
-document.querySelector('#search').addEventListener('input',e=>{for(const r of document.querySelectorAll('tbody tr'))r.hidden=!r.textContent.toLowerCase().includes(e.target.value.toLowerCase())});</script>'''
+const classFilter=document.querySelector('#class-filter'),teamFilter=document.querySelector('#team-filter'),search=document.querySelector('#search'),carSelect=document.querySelector('#car');
+let rankPage=0;
+const rankRows=[...document.querySelectorAll('#classification tbody tr')];
+function updateTeams(){const previous=teamFilter.value;teamFilter.replaceChildren(new Option('전체 팀',''));
+const teams=new Set([...laps.filter(r=>!classFilter.value||r.CLASS===classFilter.value).map(r=>r.TEAM||''),...rankRows.filter(r=>!classFilter.value||r.dataset.class===classFilter.value).map(r=>r.dataset.team)]);
+for(const team of [...teams].filter(Boolean).sort())teamFilter.add(new Option(team,team));
+if(teams.has(previous))teamFilter.value=previous;}
+function applyFilters(reset=true){if(reset)rankPage=0;
+const category=classFilter.value,team=teamFilter.value,q=search.value.trim().toLowerCase();
+const selected=laps.filter(r=>(!category||r.CLASS===category)&&(!team||(r.TEAM||'')===team)&&(!q||[r.NUMBER,r.DRIVER_NAME,r.TEAM,r.CLASS].join(' ').toLowerCase().includes(q)));
+const cars=new Set(selected.map(r=>r.NUMBER));
+function matches(row){return (!category||row.dataset.class===category)&&(!team||row.dataset.team===team)&&(!q||cars.has(row.dataset.car)||row.textContent.toLowerCase().includes(q));}
+const filtered=rankRows.filter(matches),pages=Math.ceil(filtered.length/10);
+rankPage=Math.max(0,Math.min(rankPage,pages-1));
+for(const row of rankRows)row.hidden=true;
+for(const row of filtered.slice(rankPage*10,rankPage*10+10))row.hidden=false;
+const status=document.querySelector('#rank-page');if(status){status.textContent=filtered.length?`${rankPage+1} / ${pages} 페이지 · ${rankPage*10+1}–${Math.min(rankPage*10+10,filtered.length)} / ${filtered.length}대`:'검색 결과 없음 · 0대';document.querySelector('#rank-prev').disabled=rankPage===0;document.querySelector('#rank-next').disabled=rankPage+1>=pages;}
+for(const row of document.querySelectorAll('#pace tbody tr,#stints tbody tr'))row.hidden=!matches(row);
+const previousCar=carSelect.value;carSelect.replaceChildren();
+for(const car of [...cars].sort())carSelect.add(new Option('#'+car,car));
+if(cars.has(previousCar))carSelect.value=previousCar;
+carSelect.disabled=!cars.size;draw();
+if(!cars.size)document.querySelector('#chart').textContent='선택 조건에 맞는 랩 데이터가 없습니다.';}
+classFilter.addEventListener('change',()=>{teamFilter.value='';updateTeams();applyFilters();});
+teamFilter.addEventListener('change',()=>applyFilters());search.addEventListener('input',()=>applyFilters());
+document.querySelector('#rank-prev')?.addEventListener('click',()=>{rankPage--;applyFilters(false);});
+document.querySelector('#rank-next')?.addEventListener('click',()=>{rankPage++;applyFilters(false);});
+carSelect.addEventListener('change',draw);updateTeams();applyFilters();</script>'''
     return page(entry['event']+' · '+entry['session'], body)
 
 
