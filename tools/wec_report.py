@@ -188,7 +188,7 @@ def render(entry, rows, sources, classification=None):
         times = [r['seconds'] for r in stint if r['pace_eligible']]
         values = [car, stint[0]['DRIVER_NAME'], stint[0]['LAP_NUMBER']+'–'+stint[-1]['LAP_NUMBER'], len(times), fmt(statistics.median(times) if times else None)]
         body += '<tr>'+''.join('<td>'+esc(str(v))+'</td>' for v in values)+'</tr>'
-    body += '</tbody></table></section><h2>차량별 랩타임</h2><p>가로: 랩 번호 · 세로: 랩타임(초), 아래쪽이 빠른 랩</p><select id="car">' 
+    body += '</tbody></table></section><h2>차량별 랩타임</h2><p>가로: 랩 번호 · 세로: 랩타임(초), 아래쪽이 빠른 랩</p><select id="car">'
     for car in sorted({r['NUMBER'] for r in rows}):
         body += f'<option value="{esc(car, quote=True)}">#{esc(car)}</option>'
     body += '</select><div id="chart"></div><p>점에 포커스하거나 마우스를 올리면 드라이버·랩타임 표시. 피트 랩은 주황색.</p>'
@@ -204,6 +204,13 @@ for(const r of rows){const c=document.createElementNS(ns,'circle');c.setAttribut
 document.querySelector('#car').addEventListener('change',draw);draw();
 document.querySelector('#search').addEventListener('input',e=>{for(const r of document.querySelectorAll('tbody tr'))r.hidden=!r.textContent.toLowerCase().includes(e.target.value.toLowerCase())});</script>'''
     return page(entry['event']+' · '+entry['session'], body)
+
+
+def write_bytes(path, content):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = path.with_suffix(path.suffix+'.tmp')
+    temp.write_bytes(content)
+    temp.replace(path)
 
 
 def write(path, value):
@@ -258,8 +265,8 @@ def run(year, output, event=None):
                 raise ValueError('Empty WEC classification')
         report = render(entry, rows, entry['files'], classification)
         if classification_content:
-            write(destination/'classification.csv', classification_content.decode('utf-8-sig'))
-        write(destination/'analysis.csv', content.decode('utf-8-sig'))
+            write_bytes(destination/'classification.csv', classification_content)
+        write_bytes(destination/'analysis.csv', content)
         write(destination/'laps.json', json.dumps(rows, ensure_ascii=False, indent=2))
         write(destination/'source.json', json.dumps(dict(entry, analysis=source, sha256=hashlib.sha256(content).hexdigest()),ensure_ascii=False,indent=2))
         write(destination/'report.html', report)
