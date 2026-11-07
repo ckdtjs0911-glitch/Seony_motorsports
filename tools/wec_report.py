@@ -291,12 +291,54 @@ def write(path, value):
 
 
 def build_index(output):
-    links = []
+    events = defaultdict(list)
     for file in sorted(output.glob('*/*/report.html'), reverse=True):
         metadata = json.loads(file.with_name('source.json').read_text(encoding='utf-8'))
-        label = file.relative_to(output).parts[0]+' · '+metadata['event']+' · '+metadata['session']
-        links.append(f'<li><a href="{html.escape(file.relative_to(output).as_posix(), quote=True)}">{html.escape(label)}</a></li>')
-    write(output/'index.html', page('WEC 세션 리포트', '<a href="../index.html">F1 · WEC</a><ul>'+''.join(links)+'</ul>'))
+        year = file.relative_to(output).parts[0]
+        events[(year, metadata['event'])].append((metadata['session'], file))
+    links = []
+    for (year, event), sessions in sorted(events.items(), reverse=True):
+        sessions.sort(key=lambda item: item[0])
+        directory = output/year/('event-'+hashlib.sha256(event.encode()).hexdigest()[:16])
+        title = year+' · '+re.sub(r'^\d+_', '', event)
+        tabs = []
+        # Open the latest available session; do not invent unpublished sessions.
+        selected = len(sessions)-1
+        for i, (session, file) in enumerate(sessions):
+            label = session.split('_', 1)[-1]
+            src = '../'+file.parent.name+'/report.html'
+            tabs.append(f'<button type="button" role="tab" id="session-{i}" '
+                        f'aria-controls="session-panel" aria-selected="{str(i == selected).lower()}" '
+                        f'tabindex="{0 if i == selected else -1}" '
+                        f'data-src="{html.escape(src, quote=True)}" '
+                        f'data-title="{html.escape(session, quote=True)}">{html.escape(label)}</button>')
+        body = ('<a href="../../index.html">WEC 대회 목록</a>'
+                f'<p>한 대회의 세션 {len(sessions)}개 · 세션별 공식 순위와 클래스·팀 필터를 제공합니다.</p>'
+                '<style>.session-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}'
+                '.session-tabs button{background:#18273e;color:#edf2ff;border:1px solid #48627e;'
+                'border-radius:5px;padding:12px;font:inherit;cursor:pointer}'
+                '.session-tabs button[aria-selected=true]{background:#68e5cc;color:#102b2c;font-weight:700}'
+                '.session-tabs button:focus-visible{outline:2px solid white;outline-offset:3px}'
+                '#session-frame{width:100%;height:80vh;min-height:600px;border:1px solid #40506c;border-radius:8px}'
+                '</style><div class="session-tabs" role="tablist" aria-label="대회 세션">'
+                +''.join(tabs)+'</div><p><a id="session-link" target="_blank" rel="noopener">세션만 새 창으로 열기</a></p>'
+                f'<div id="session-panel" role="tabpanel" aria-labelledby="session-{selected}">'
+                '<iframe id="session-frame" title="세션 리포트"></iframe></div>'
+                '<script>const tabs=[...document.querySelectorAll("[role=tab]")];'
+                'function select(tab){for(const t of tabs){t.setAttribute("aria-selected",String(t===tab));t.tabIndex=t===tab?0:-1;}'
+                'const frame=document.querySelector("#session-frame");frame.src=tab.dataset.src;frame.title=tab.dataset.title;'
+                'document.querySelector("#session-panel").setAttribute("aria-labelledby",tab.id);'
+                'document.querySelector("#session-link").href=tab.dataset.src;}'
+                'for(const [i,tab] of tabs.entries()){tab.addEventListener("click",()=>select(tab));'
+                'tab.addEventListener("keydown",e=>{let next;if(e.key==="ArrowRight")next=(i+1)%tabs.length;'
+                'if(e.key==="ArrowLeft")next=(i+tabs.length-1)%tabs.length;'
+                'if(e.key==="Home")next=0;if(e.key==="End")next=tabs.length-1;'
+                'if(next!==undefined){e.preventDefault();select(tabs[next]);tabs[next].focus();}});}'
+                'select(tabs.find(t=>t.getAttribute("aria-selected")==="true"));</script>')
+        write(directory/'index.html', page(title, body))
+        link = html.escape((directory/'index.html').relative_to(output).as_posix(), quote=True)
+        links.append(f'<li><a href="{link}">{html.escape(title)}</a> · {len(sessions)}개 세션</li>')
+    write(output/'index.html', page('WEC 대회 리포트', '<a href="../index.html">F1 · WEC</a><ul>'+''.join(links)+'</ul>'))
 
 
 def run(year, output, event=None):

@@ -20,7 +20,9 @@ python -m venv .venv
 ```
 
 `reports/index.html`이 통합 입구, `reports/f1.html`이 F1 아카이브,
-`reports/wec/index.html`이 WEC 목록입니다. WEC는 `--event`를 생략하면 선택 연도의
+`reports/wec/index.html`이 WEC 대회 목록입니다. 같은 연도·대회의 연습·예선·레이스를
+한 대회 페이지의 세션 탭으로 모으며, 가장 최근에 수집한 세션을 기본으로 표시합니다.
+세션별 리포트와 원본 파일도 유지합니다. WEC는 `--event`를 생략하면 선택 연도의
 공식 목록 전체를 수집합니다. 기본 연도는 현재 UTC 연도입니다. 별도 API 키는 필요 없습니다.
 
 WEC는 FIA WEC 세션의 Analysis CSV와 있으면 Classification CSV를 사용합니다.

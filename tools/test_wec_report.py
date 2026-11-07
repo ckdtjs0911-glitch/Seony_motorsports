@@ -1,9 +1,37 @@
 import unittest
+import json
+import tempfile
+from pathlib import Path
 from wec_report import duration, parse_csv, discover, render, summarize, stints, parse_classification
 
 HEADER = 'NUMBER; DRIVER_NUMBER; LAP_NUMBER; LAP_TIME; DRIVER_NAME;CLASS;TEAM;PIT_TIME;CROSSING_FINISH_LINE_IN_PIT;FLAG_AT_FL\n'
 
 class WECTests(unittest.TestCase):
+    def test_event_pages_group_sessions_and_keep_years_separate(self):
+        from wec_report import build_index
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for year, key, session in [('2026', 'a', '202604180900_Free Practice 1'),
+                                       ('2026', 'b', '202604191300_Race'),
+                                       ('2025', 'c', '202504191300_Race')]:
+                directory = root/year/key
+                directory.mkdir(parents=True)
+                (directory/'report.html').write_text('report')
+                (directory/'source.json').write_text(json.dumps({'event': '01_IMOLA', 'session': session}))
+            build_index(root)
+            pages = list(root.glob('*/event-*/index.html'))
+            self.assertEqual(len(pages), 2)
+            event = next(p for p in pages if p.parts[-3] == '2026')
+            text = event.read_text()
+            self.assertEqual(text.count('role="tab"'), 2)
+            self.assertIn('Free Practice 1', text)
+            self.assertIn('../b/report.html', text)
+            self.assertNotIn('../c/report.html', text)
+            self.assertIn('id="session-1" aria-controls="session-panel" aria-selected="true"', text)
+            before = (root/'index.html').read_text()
+            build_index(root)
+            self.assertEqual((root/'index.html').read_text(), before)
+
     def test_times(self):
         self.assertEqual(duration('1:02:03.456'), 3723.456)
         for value in ['', 'NaN', 'inf', '-1', 'bad']:
