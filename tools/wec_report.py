@@ -227,7 +227,8 @@ def render(entry, rows, sources, classification=None):
         times = [r['seconds'] for r in stint if r['pace_eligible']]
         values = [car, stint[0]['DRIVER_NAME'], stint[0]['LAP_NUMBER']+'–'+stint[-1]['LAP_NUMBER'], len(times), fmt(statistics.median(times) if times else None)]
         body += '<tr'+attrs(stint[0]['CLASS'], stint[0].get('TEAM', ''), car)+'>'+''.join('<td>'+esc(str(v))+'</td>' for v in values)+'</tr>'
-    body += '</tbody></table></section><h2>차량별 랩타임</h2><p>가로: 랩 번호 · 세로: 랩타임(초), 아래쪽이 빠른 랩</p><select id="car">'
+    body += '</tbody></table></section>'+pager('stint', '관측 주행 구간 페이지')
+    body += '<h2>차량별 랩타임</h2><p>가로: 랩 번호 · 세로: 랩타임(초), 아래쪽이 빠른 랩</p><select id="car">'
     for car in sorted({r['NUMBER'] for r in rows}):
         body += f'<option value="{esc(car, quote=True)}">#{esc(car)}</option>'
     body += '</select><div id="chart"></div><p>점에 포커스하거나 마우스를 올리면 드라이버·랩타임 표시. 피트 랩은 주황색.</p>'
@@ -241,7 +242,7 @@ const maxLap=Math.max(...rows.map(r=>Number(r.LAP_NUMBER)),1),lo=Math.min(...row
 for(const [x,y,text] of [[30,315,'Lap 0'],[900,315,'Lap '+maxLap],[1,25,hi.toFixed(1)+'s'],[1,290,lo.toFixed(1)+'s']]){const t=document.createElementNS(ns,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.setAttribute('fill','#edf2ff');t.textContent=text;svg.append(t)}
 for(const r of rows){const c=document.createElementNS(ns,'circle');c.setAttribute('cx',30+940*Number(r.LAP_NUMBER)/maxLap);c.setAttribute('cy',290-260*(r.seconds-lo)/(hi-lo||1));c.setAttribute('r',4);c.setAttribute('fill',r.pit_in||r.pit_seconds?'#ffad60':'#82d6ff');c.setAttribute('tabindex','0');const label=`${r.DRIVER_NAME} / Lap ${r.LAP_NUMBER}: ${r.LAP_TIME}`;c.setAttribute('aria-label',label);const t=document.createElementNS(ns,'title');t.textContent=label;c.append(t);svg.append(c)}box.append(svg)}
 const classFilter=document.querySelector('#class-filter'),teamFilter=document.querySelector('#team-filter'),search=document.querySelector('#search'),carSelect=document.querySelector('#car');
-const pageState={rank:0,driver:0};
+const pageState={rank:0,driver:0,stint:0};
 const rankRows=[...document.querySelectorAll('#classification tbody tr')];
 function updateTeams(){const previous=teamFilter.value;teamFilter.replaceChildren(new Option('전체 팀',''));
 const teams=new Set([...laps.filter(r=>!classFilter.value||r.CLASS===classFilter.value).map(r=>r.TEAM||''),...rankRows.filter(r=>!classFilter.value||r.dataset.class===classFilter.value).map(r=>r.dataset.team)]);
@@ -251,10 +252,10 @@ function paginate(rows,prefix){const status=document.querySelector('#'+prefix+'-
 const pages=Math.ceil(rows.length/10);pageState[prefix]=Math.max(0,Math.min(pageState[prefix],pages-1));const current=pageState[prefix];
 for(const row of rows.slice(current*10,current*10+10))row.hidden=false;
 const ranges=document.querySelector('#'+prefix+'-ranges');ranges.replaceChildren();
-for(let i=0;i<pages;i++){const button=document.createElement('button');button.type='button';button.textContent=`${i*10+1}–${Math.min(i*10+10,rows.length)}`;button.setAttribute('aria-label',`${button.textContent} ${prefix==='rank'?'차량':'선수'} 보기`);if(i===current)button.setAttribute('aria-current','page');button.addEventListener('click',()=>{pageState[prefix]=i;applyFilters(false);document.querySelector('#'+prefix+'-ranges button[aria-current="page"]').focus();});ranges.append(button);}
-status.textContent=rows.length?`${current*10+1}–${Math.min(current*10+10,rows.length)} / ${rows.length}${prefix==='rank'?'대':'명'}`:'검색 결과 없음';
+for(let i=0;i<pages;i++){const button=document.createElement('button');button.type='button';button.textContent=`${i*10+1}–${Math.min(i*10+10,rows.length)}`;button.setAttribute('aria-label',`${button.textContent} ${prefix==='rank'?'차량':prefix==='driver'?'선수':'주행 구간'} 보기`);if(i===current)button.setAttribute('aria-current','page');button.addEventListener('click',()=>{pageState[prefix]=i;applyFilters(false);document.querySelector('#'+prefix+'-ranges button[aria-current="page"]').focus();});ranges.append(button);}
+status.textContent=rows.length?`${current*10+1}–${Math.min(current*10+10,rows.length)} / ${rows.length}${prefix==='rank'?'대':prefix==='driver'?'명':'개'}`:'검색 결과 없음';
 document.querySelector('#'+prefix+'-prev').disabled=current===0;document.querySelector('#'+prefix+'-next').disabled=current+1>=pages;}
-function applyFilters(reset=true){if(reset){pageState.rank=0;pageState.driver=0;}
+function applyFilters(reset=true){if(reset){pageState.rank=0;pageState.driver=0;pageState.stint=0;}
 const category=classFilter.value,team=teamFilter.value,q=search.value.trim().toLowerCase();
 const selected=laps.filter(r=>(!category||r.CLASS===category)&&(!team||(r.TEAM||'')===team)&&(!q||[r.NUMBER,r.DRIVER_NAME,r.TEAM,r.CLASS].join(' ').toLowerCase().includes(q)));
 const cars=new Set(selected.map(r=>r.NUMBER));
@@ -263,7 +264,8 @@ for(const row of rankRows)row.hidden=true;
 paginate(rankRows.filter(matches),'rank');
 const drivers=[...document.querySelectorAll('#pace tbody tr')];for(const row of drivers)row.hidden=true;
 paginate(drivers.filter(matches),'driver');
-for(const row of document.querySelectorAll('#stints tbody tr'))row.hidden=!matches(row);
+const stintRows=[...document.querySelectorAll('#stints tbody tr')];for(const row of stintRows)row.hidden=true;
+paginate(stintRows.filter(matches),'stint');
 const previousCar=carSelect.value;carSelect.replaceChildren();
 for(const car of [...cars].sort())carSelect.add(new Option('#'+car,car));
 if(cars.has(previousCar))carSelect.value=previousCar;
@@ -271,7 +273,7 @@ carSelect.disabled=!cars.size;draw();
 if(!cars.size)document.querySelector('#chart').textContent='선택 조건에 맞는 랩 데이터가 없습니다.';}
 classFilter.addEventListener('change',()=>{teamFilter.value='';updateTeams();applyFilters();});
 teamFilter.addEventListener('change',()=>applyFilters());search.addEventListener('input',()=>applyFilters());
-for(const prefix of ['rank','driver']){document.querySelector('#'+prefix+'-prev')?.addEventListener('click',()=>{pageState[prefix]--;applyFilters(false);});document.querySelector('#'+prefix+'-next')?.addEventListener('click',()=>{pageState[prefix]++;applyFilters(false);});}
+for(const prefix of ['rank','driver','stint']){document.querySelector('#'+prefix+'-prev')?.addEventListener('click',()=>{pageState[prefix]--;applyFilters(false);});document.querySelector('#'+prefix+'-next')?.addEventListener('click',()=>{pageState[prefix]++;applyFilters(false);});}
 carSelect.addEventListener('change',draw);updateTeams();applyFilters();</script>'''
     return page(entry['event']+' · '+entry['session'], body)
 
