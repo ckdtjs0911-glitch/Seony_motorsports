@@ -241,7 +241,8 @@ def write(path, value):
 def build_index(output):
     links = []
     for file in sorted(output.glob('*/*/report.html'), reverse=True):
-        label = ' / '.join(file.relative_to(output).parts[:-1])
+        metadata = json.loads(file.with_name('source.json').read_text(encoding='utf-8'))
+        label = file.relative_to(output).parts[0]+' · '+metadata['event']+' · '+metadata['session']
         links.append(f'<li><a href="{html.escape(file.relative_to(output).as_posix(), quote=True)}">{html.escape(label)}</a></li>')
     write(output/'index.html', page('WEC 세션 리포트', '<a href="../index.html">F1 · WEC</a><ul>'+''.join(links)+'</ul>'))
 
