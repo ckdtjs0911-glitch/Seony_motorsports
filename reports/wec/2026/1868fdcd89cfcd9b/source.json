@@ -1,0 +1,27 @@
+{
+  "event": "07_BARCELONA-CATALUNYA",
+  "session": "202610171615_Hyperpole HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Hyperpole HYPERCAR_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171615_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR_Final.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171615_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171615_Hyperpole%20HYPERCAR/26_Weather_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171615_Hyperpole%20HYPERCAR/99_TrackLimits_Hyperpole%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171615_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+  },
+  "sha256": "4335e272afc3cb840d8e4e6f647a790f33eab22468c2b3af2618101f1d558896"
+}

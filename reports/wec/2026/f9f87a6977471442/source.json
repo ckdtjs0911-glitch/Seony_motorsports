@@ -1,0 +1,27 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609041600_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609041600_Free%20Practice%202/03_Classification_Free%20Practice%202_Final.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609041600_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609041600_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "TrackLimits_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609041600_Free%20Practice%202/99_TrackLimits_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609041600_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "ea7f391ca84cda97a6b9b80e5e8a2a4725192aa74c021f53c31faf15225b3776"
+}

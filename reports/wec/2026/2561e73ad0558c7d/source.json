@@ -1,0 +1,27 @@
+{
+  "event": "07_BARCELONA-CATALUNYA",
+  "session": "202610171555_Qualifying HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Qualifying HYPERCAR_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171555_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR_Final.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171555_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171555_Qualifying%20HYPERCAR/26_Weather_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171555_Qualifying%20HYPERCAR/99_TrackLimits_Qualifying%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171555_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+  },
+  "sha256": "5a07b391baa1557380d06ea2b4925f4398f0dfa0a15af3bf25673ff4e149cdb8"
+}

@@ -1,0 +1,23 @@
+{
+  "event": "02_SPA FRANCORCHAMPS",
+  "session": "202605081520_Qualifying HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081520_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081520_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081520_Qualifying%20HYPERCAR/26_Weather_Qualifying%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/02_SPA%20FRANCORCHAMPS/653_FIA%20WEC/202605081520_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+  },
+  "sha256": "5e320c4ff159ee1dcd987fe63ca8315340a896f2317de7bc0ac41bfaae9b804c"
+}

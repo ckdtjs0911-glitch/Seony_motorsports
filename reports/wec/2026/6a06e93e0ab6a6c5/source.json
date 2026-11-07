@@ -1,0 +1,23 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609051520_Hyperpole LMGT3",
+  "files": [
+    {
+      "name": "Classification_Hyperpole LMGT3_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051520_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3_Final.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051520_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051520_Hyperpole%20LMGT3/26_Weather_Hyperpole%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051520_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV"
+  },
+  "sha256": "55cdb274c97e125dcf49ca3b9e6a061e8c9949e1671e44273a36ad1e5f5042c7"
+}

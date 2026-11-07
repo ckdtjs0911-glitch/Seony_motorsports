@@ -1,0 +1,23 @@
+{
+  "event": "01_IMOLA",
+  "session": "202604181530_Hyperpole HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181530_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181530_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181530_Hyperpole%20HYPERCAR/26_Weather_Hyperpole%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181530_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV"
+  },
+  "sha256": "c01c711516de92c5f2e616b77ec9147f7abab44f96fd3ac3824942795368774e"
+}

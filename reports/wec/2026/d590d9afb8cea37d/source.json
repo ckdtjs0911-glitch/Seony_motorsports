@@ -1,0 +1,119 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606131600_Race",
+  "files": [
+    {
+      "name": "Classification_Race_Hour 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/01_Hour%201/03_Classification_Race_Hour%201.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/02_Hour%202/03_Classification_Race_Hour%202.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/03_Hour%203/03_Classification_Race_Hour%203.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 4.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/04_Hour%204/03_Classification_Race_Hour%204.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 5.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/05_Hour%205/03_Classification_Race_Hour%205.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/06_Hour%206/03_Classification_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 7.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/07_Hour%207/03_Classification_Race_Hour%207.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 8.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/08_Hour%208/03_Classification_Race_Hour%208.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 9.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/09_Hour%209/03_Classification_Race_Hour%209.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 10.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/10_Hour%2010/03_Classification_Race_Hour%2010.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 11.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/11_Hour%2011/03_Classification_Race_Hour%2011.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 12.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/12_Hour%2012/03_Classification_Race_Hour%2012.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 13.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/13_Hour%2013/03_Classification_Race_Hour%2013.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 14.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/14_Hour%2014/03_Classification_Race_Hour%2014.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 15.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/15_Hour%2015/03_Classification_Race_Hour%2015.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 16.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/16_Hour%2016/03_Classification_Race_Hour%2016.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 17.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/17_Hour%2017/03_Classification_Race_Hour%2017.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 18.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/18_Hour%2018/03_Classification_Race_Hour%2018.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 19.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/19_Hour%2019/03_Classification_Race_Hour%2019.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 20.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/20_Hour%2020/03_Classification_Race_Hour%2020.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 21.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/21_Hour%2021/03_Classification_Race_Hour%2021.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 22.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/22_Hour%2022/03_Classification_Race_Hour%2022.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 23.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/23_Hour%2023/03_Classification_Race_Hour%2023.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 24.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/24_Hour%2024/03_Classification_Race_Hour%2024.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Race_Hour 24.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/24_Hour%2024/23_AnalysisEnduranceWithSections_Race_Hour%2024.CSV"
+    },
+    {
+      "name": "Analysis_Race_Hour 24.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/24_Hour%2024/23_Analysis_Race_Hour%2024.CSV"
+    },
+    {
+      "name": "Weather_Race_Hour 24.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/24_Hour%2024/26_Weather_Race_Hour%2024.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Race_Hour 24.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131600_Race/24_Hour%2024/23_Analysis_Race_Hour%2024.CSV"
+  },
+  "sha256": "9a3082814a464ec7869ccc6051333279f081767b0a07c761ccdd7118d0bb60fe"
+}

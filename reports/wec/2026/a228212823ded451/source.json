@@ -1,0 +1,43 @@
+{
+  "event": "01_IMOLA",
+  "session": "202604191300_Race",
+  "files": [
+    {
+      "name": "Classification_Race_Hour 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/01_Hour%201/03_Classification_Race_Hour%201.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/02_Hour%202/03_Classification_Race_Hour%202.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/03_Hour%203/03_Classification_Race_Hour%203.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 4.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/04_Hour%204/03_Classification_Race_Hour%204.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 5.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/05_Hour%205/03_Classification_Race_Hour%205.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/06_Hour%206/03_Classification_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Analysis_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Weather_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/06_Hour%206/26_Weather_Race_Hour%206.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Race_Hour 6.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604191300_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+  },
+  "sha256": "d2a32dc55534e5f9e400dd282a82764027371c130dd8d3de49dfac6ca9c1d5f5"
+}

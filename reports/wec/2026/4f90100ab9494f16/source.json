@@ -1,0 +1,27 @@
+{
+  "event": "07_BARCELONA-CATALUNYA",
+  "session": "202610171150_Qualifying LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMGT3_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171150_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3_Final.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171150_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171150_Qualifying%20LMGT3/26_Weather_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "TrackLimits_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171150_Qualifying%20LMGT3/99_TrackLimits_Qualifying%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/07_BARCELONA-CATALUNYA/688_FIA%20WEC/202610171150_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+  },
+  "sha256": "b6a7571db71537311b80160e850ddb49e7ddf26ec0276f59dbcb557676c21e7f"
+}

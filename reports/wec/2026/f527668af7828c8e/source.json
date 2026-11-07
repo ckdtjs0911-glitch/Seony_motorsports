@@ -1,0 +1,27 @@
+{
+  "event": "06_FUJI SPEEDWAY",
+  "session": "202609251430_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/06_FUJI%20SPEEDWAY/679_FIA%20WEC/202609251430_Free%20Practice%202/03_Classification_Free%20Practice%202_Final.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/06_FUJI%20SPEEDWAY/679_FIA%20WEC/202609251430_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/06_FUJI%20SPEEDWAY/679_FIA%20WEC/202609251430_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "TrackLimits_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/06_FUJI%20SPEEDWAY/679_FIA%20WEC/202609251430_Free%20Practice%202/99_TrackLimits_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/06_FUJI%20SPEEDWAY/679_FIA%20WEC/202609251430_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "8ae04f559d1f67ed2fe716bf6800071d3b0e875f3a8010e31fff816d992a72c9"
+}

@@ -1,0 +1,27 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606101930_Qualifying HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101930_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101930_Qualifying%20HYPERCAR/23_AnalysisEnduranceWithSections_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101930_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101930_Qualifying%20HYPERCAR/26_Weather_Qualifying%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606101930_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+  },
+  "sha256": "cc62d05de647dee94a40d860fa8f5e93d7c6afe5e529c94326ef0340edd3a991"
+}

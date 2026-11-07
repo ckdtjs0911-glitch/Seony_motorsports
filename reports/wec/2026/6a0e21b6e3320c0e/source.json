@@ -1,0 +1,47 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609061300_Race",
+  "files": [
+    {
+      "name": "Classification_Race_Hour 1.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/01_Hour%201/03_Classification_Race_Hour%201.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/02_Hour%202/03_Classification_Race_Hour%202.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/03_Hour%203/03_Classification_Race_Hour%203.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 4.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/04_Hour%204/03_Classification_Race_Hour%204.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 5.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/05_Hour%205/03_Classification_Race_Hour%205.CSV"
+    },
+    {
+      "name": "Classification_Race_Hour 6_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/06_Hour%206/03_Classification_Race_Hour%206_Final.CSV"
+    },
+    {
+      "name": "Analysis_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+    },
+    {
+      "name": "Weather_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/06_Hour%206/26_Weather_Race_Hour%206.CSV"
+    },
+    {
+      "name": "TrackLimits_Race_Hour 6.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/06_Hour%206/99_TrackLimits_Race_Hour%206.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Race_Hour 6.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609061300_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV"
+  },
+  "sha256": "f5879795f6bd6d96d32e1e872eb842c27bc1a7caff9af81346e797d78027fb4c"
+}

@@ -1,0 +1,23 @@
+{
+  "event": "01_IMOLA",
+  "session": "202604181430_Qualifying LMGT3",
+  "files": [
+    {
+      "name": "Classification_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181430_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Qualifying LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181430_Qualifying%20LMGT3/26_Weather_Qualifying%20LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604181430_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV"
+  },
+  "sha256": "f79af19b9b4baf30b35cf7968fe0a05f697b5c961f9c622d4039958c42c4695e"
+}

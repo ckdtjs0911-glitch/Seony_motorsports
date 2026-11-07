@@ -1,0 +1,27 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606131200_Warm Up",
+  "files": [
+    {
+      "name": "Classification_Warm Up.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131200_Warm%20Up/03_Classification_Warm%20Up.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Warm Up.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131200_Warm%20Up/23_AnalysisEnduranceWithSections_Warm%20Up.CSV"
+    },
+    {
+      "name": "Analysis_Warm Up.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131200_Warm%20Up/23_Analysis_Warm%20Up.CSV"
+    },
+    {
+      "name": "Weather_Warm Up.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131200_Warm%20Up/26_Weather_Warm%20Up.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Warm Up.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606131200_Warm%20Up/23_Analysis_Warm%20Up.CSV"
+  },
+  "sha256": "2440d6a59f6f76034ccdd9392a91e3c868466e1035506aac977ca53265f94ccc"
+}

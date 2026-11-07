@@ -1,0 +1,23 @@
+{
+  "event": "01_IMOLA",
+  "session": "202604171515_Free Practice 2",
+  "files": [
+    {
+      "name": "Classification_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604171515_Free%20Practice%202/03_Classification_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Analysis_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604171515_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+    },
+    {
+      "name": "Weather_Free Practice 2.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604171515_Free%20Practice%202/26_Weather_Free%20Practice%202.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Free Practice 2.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/01_IMOLA/645_FIA%20WEC/202604171515_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV"
+  },
+  "sha256": "9152fdff98010075bcb9c4d4426bac3e88beb3253745fe5c68d7b3915d5ee3b3"
+}

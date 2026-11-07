@@ -1,0 +1,27 @@
+{
+  "event": "05_CIRCUIT OF THE AMERICAS",
+  "session": "202609051540_Qualifying HYPERCAR",
+  "files": [
+    {
+      "name": "Classification_Qualifying HYPERCAR_Final.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051540_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR_Final.CSV"
+    },
+    {
+      "name": "Analysis_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051540_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "Weather_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051540_Qualifying%20HYPERCAR/26_Weather_Qualifying%20HYPERCAR.CSV"
+    },
+    {
+      "name": "TrackLimits_Qualifying HYPERCAR.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051540_Qualifying%20HYPERCAR/99_TrackLimits_Qualifying%20HYPERCAR.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Qualifying HYPERCAR.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/05_CIRCUIT%20OF%20THE%20AMERICAS/673_FIA%20WEC/202609051540_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV"
+  },
+  "sha256": "59aa91e546f52fc7a5ba2f22a0fa11e9bdd7333879c5094447e9974c136e3116"
+}

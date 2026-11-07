@@ -1,0 +1,27 @@
+{
+  "event": "03_LE MANS",
+  "session": "202606112000_Hyperpole 1 LMP2-LMGT3",
+  "files": [
+    {
+      "name": "Classification_Hyperpole 1 LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606112000_Hyperpole%201%20LMP2-LMGT3/03_Classification_Hyperpole%201%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "AnalysisEnduranceWithSections_Hyperpole 1 LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606112000_Hyperpole%201%20LMP2-LMGT3/23_AnalysisEnduranceWithSections_Hyperpole%201%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "Analysis_Hyperpole 1 LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606112000_Hyperpole%201%20LMP2-LMGT3/23_Analysis_Hyperpole%201%20LMP2-LMGT3.CSV"
+    },
+    {
+      "name": "Weather_Hyperpole 1 LMP2-LMGT3.CSV",
+      "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606112000_Hyperpole%201%20LMP2-LMGT3/26_Weather_Hyperpole%201%20LMP2-LMGT3.CSV"
+    }
+  ],
+  "analysis": {
+    "name": "Analysis_Hyperpole 1 LMP2-LMGT3.CSV",
+    "url": "https://files.alkamelcloud.com/wec/results/15_2026/03_LE%20MANS/657_FIA%20WEC/202606112000_Hyperpole%201%20LMP2-LMGT3/23_Analysis_Hyperpole%201%20LMP2-LMGT3.CSV"
+  },
+  "sha256": "ee544407147a583d8df81bc4f077bc04414c3c7ccf2756637736dbad39e8a545"
+}
