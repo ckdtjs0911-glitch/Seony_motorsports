@@ -1,5 +1,5 @@
 import unittest
-from wec_report import duration, parse_csv, discover, render, summarize, stints
+from wec_report import duration, parse_csv, discover, render, summarize, stints, parse_classification
 
 HEADER = 'NUMBER; DRIVER_NUMBER; LAP_NUMBER; LAP_TIME; DRIVER_NAME;CLASS;TEAM;PIT_TIME;CROSSING_FINISH_LINE_IN_PIT;FLAG_AT_FL\n'
 
@@ -50,6 +50,11 @@ class WECTests(unittest.TestCase):
         page = render({'event':'E','session':'S'}, rows, [], [{'POS':'8', 'NUMBER':'7', 'CLASS':'C','TIME':'1:30','TEAM':'<Team>'}])
         self.assertIn('<td>8</td>',page)
         self.assertIn('&lt;Team&gt;',page)
+
+    def test_race_classification_aliases(self):
+        result = parse_classification(b'POSITION;NUMBER;CLASS;TOTAL_TIME;STATUS\n2;007;HYPERCAR;6:00:01.000;Classified\n')
+        self.assertEqual(result[0]['POS'], '2')
+        self.assertEqual(result[0]['TIME'], '6:00:01.000')
 
     def test_html_escapes_driver_and_embedded_script(self):
         rows=parse_csv((HEADER+'007;1;2;1:30;</script><script>alert(1)</script>;C;T;;;GF').encode())

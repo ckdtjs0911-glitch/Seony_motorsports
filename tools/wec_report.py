@@ -111,6 +111,24 @@ def parse_csv(content):
     return rows
 
 
+def parse_classification(content):
+    reader = csv.DictReader(io.StringIO(content.decode('utf-8-sig')), delimiter=';')
+    reader.fieldnames = [h.strip() for h in (reader.fieldnames or [])]
+    fields = set(reader.fieldnames)
+    if not {'NUMBER', 'CLASS'}.issubset(fields) or not fields.intersection({'POS', 'POSITION'}):
+        raise ValueError('Unrecognized WEC classification columns: '+str(reader.fieldnames))
+    rows = []
+    for raw in reader:
+        row = {k: (v or '').strip() for k,v in raw.items() if k}
+        row['POS'] = row.get('POS', row.get('POSITION', ''))
+        if 'TOTAL_TIME' in row:
+            row['TIME'] = row['TOTAL_TIME']
+        rows.append(row)
+    if not rows:
+        raise ValueError('Empty WEC classification')
+    return rows
+
+
 def summarize(rows):
     groups = defaultdict(list)
     for row in rows:
@@ -172,7 +190,7 @@ def render(entry, rows, sources, classification=None):
     body += '피트 진입 수는 완료된 정차 횟수와 다르며 첫 출차의 PIT_TIME도 정차로 세지 않습니다.</p>'
     body += '<p>출처: ' + ' · '.join(f'<a href="{esc(s["url"], quote=True)}">{esc(s["name"])}</a>' for s in sources) + '</p>'
     if classification:
-        columns = ['POS', 'NUMBER', 'CLASS', 'TEAM', 'LAPS', 'TIME', 'GAP_FIRST']
+        columns = ['POS', 'NUMBER', 'CLASS', 'TEAM', 'LAPS', 'TIME', 'GAP_FIRST', 'STATUS']
         body += '<h2>공식 CSV 세션 결과</h2><p>기록 파일의 현재 순위입니다. 잠정/확정 여부는 원본 문서를 확인하세요. TIME은 세션별 공식 값 그대로 표시합니다.</p><section><table><thead><tr>'
         body += ''.join('<th>'+esc(c)+'</th>' for c in columns)+'</tr></thead><tbody>'
         for result in classification:
@@ -256,13 +274,7 @@ def run(year, output, event=None):
         classification_content = None
         if classifications:
             classification_content = get(http, max(classifications, key=rank)['url']).content
-            reader = csv.DictReader(io.StringIO(classification_content.decode('utf-8-sig')), delimiter=';')
-            reader.fieldnames = [h.strip() for h in (reader.fieldnames or [])]
-            if not {'POS', 'NUMBER', 'CLASS'}.issubset(reader.fieldnames):
-                raise ValueError('Unrecognized WEC classification columns')
-            classification = [{k: (v or '').strip() for k,v in r.items() if k} for r in reader]
-            if not classification:
-                raise ValueError('Empty WEC classification')
+            classification = parse_classification(classification_content)
         report = render(entry, rows, entry['files'], classification)
         if classification_content:
             write_bytes(destination/'classification.csv', classification_content)
