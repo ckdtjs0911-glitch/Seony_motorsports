@@ -290,6 +290,55 @@ def write(path, value):
     temp.replace(path)
 
 
+def render_event(title, sessions):
+    tabs, panels, mounts = [], [], []
+    selected = len(sessions)-1
+    for i, (session, file) in enumerate(sessions):
+        label = session.split('_', 1)[-1]
+        prefix = f's{i}-'
+        content = file.read_text(encoding='utf-8')
+        scripts = re.findall(r'<script>(.*?)</script>', content, flags=re.S)
+        content = re.sub(r'<script>.*?</script>', '', content, flags=re.S)
+        # Generated reports have one inline stylesheet followed by their body.
+        content = content.split('</style>', 1)[-1].removesuffix('</html>')
+        content = re.sub(r'id="([^"]+)"', lambda m: 'id="'+prefix+m[1]+'"', content)
+        content = content.replace('href="laps.json"', f'href="../{file.parent.name}/laps.json"')
+        tabs.append(f'<button type="button" role="tab" id="session-{i}" '
+                    f'aria-controls="panel-{i}" aria-selected="{str(i == selected).lower()}" '
+                    f'tabindex="{0 if i == selected else -1}">{html.escape(label)}</button>')
+        hidden = '' if i == selected else ' hidden'
+        panels.append(f'<div id="panel-{i}" role="tabpanel" aria-labelledby="session-{i}"{hidden}>'
+                      +content+'</div>')
+        # Scope each existing report script to its panel without frames or eval.
+        mounts.append('function(root){const document={'
+                      'querySelector:q=>root.querySelector(q.replace(/#([A-Za-z][\\w-]*)/g,"#'+prefix+'$1")),'
+                      'querySelectorAll:q=>root.querySelectorAll(q.replace(/#([A-Za-z][\\w-]*)/g,"#'+prefix+'$1")),'
+                      'createElement:(...args)=>window.document.createElement(...args),'
+                      'createElementNS:(...args)=>window.document.createElementNS(...args)};'
+                      +';'.join(scripts)+'}')
+    return page(title, '<a href="../../index.html">WEC 대회 목록</a>'
+                f'<p>한 대회의 세션 {len(sessions)}개 · 세션별 공식 순위와 클래스·팀 필터를 제공합니다.</p>'
+                '<style>.session-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}'
+                '.session-tabs button{background:#18273e;color:#edf2ff;border:1px solid #48627e;'
+                'border-radius:5px;padding:12px;font:inherit;cursor:pointer}'
+                '.session-tabs button[aria-selected=true]{background:#68e5cc;color:#102b2c;font-weight:700}'
+                '.session-tabs button:focus-visible{outline:2px solid white;outline-offset:3px}'
+                '[role=tabpanel][hidden]{display:none}</style>'
+                '<div class="session-tabs" role="tablist" aria-label="대회 세션">'
+                +''.join(tabs)+'</div>'+''.join(panels)
+                +'<script>const mounts=['+','.join(mounts)+'];'
+                'const mounted=new Set(),tabs=[...document.querySelectorAll("[role=tab]")];'
+                'function select(index){for(const [i,t] of tabs.entries()){t.setAttribute("aria-selected",String(i===index));'
+                't.tabIndex=i===index?0:-1;document.getElementById("panel-"+i).hidden=i!==index;}'
+                'if(!mounted.has(index)){mounts[index](document.getElementById("panel-"+index));mounted.add(index);}}'
+                'for(const [i,tab] of tabs.entries()){tab.addEventListener("click",()=>select(i));'
+                'tab.addEventListener("keydown",e=>{let next;if(e.key==="ArrowRight")next=(i+1)%tabs.length;'
+                'if(e.key==="ArrowLeft")next=(i+tabs.length-1)%tabs.length;'
+                'if(e.key==="Home")next=0;if(e.key==="End")next=tabs.length-1;'
+                'if(next!==undefined){e.preventDefault();select(next);tabs[next].focus();}});}'
+                f'select({selected});</script>')
+
+
 def build_index(output):
     events = defaultdict(list)
     for file in sorted(output.glob('*/*/report.html'), reverse=True):
@@ -301,41 +350,7 @@ def build_index(output):
         sessions.sort(key=lambda item: item[0])
         directory = output/year/('event-'+hashlib.sha256(event.encode()).hexdigest()[:16])
         title = year+' · '+re.sub(r'^\d+_', '', event)
-        tabs = []
-        # Open the latest available session; do not invent unpublished sessions.
-        selected = len(sessions)-1
-        for i, (session, file) in enumerate(sessions):
-            label = session.split('_', 1)[-1]
-            src = '../'+file.parent.name+'/report.html'
-            tabs.append(f'<button type="button" role="tab" id="session-{i}" '
-                        f'aria-controls="session-panel" aria-selected="{str(i == selected).lower()}" '
-                        f'tabindex="{0 if i == selected else -1}" '
-                        f'data-src="{html.escape(src, quote=True)}" '
-                        f'data-title="{html.escape(session, quote=True)}">{html.escape(label)}</button>')
-        body = ('<a href="../../index.html">WEC 대회 목록</a>'
-                f'<p>한 대회의 세션 {len(sessions)}개 · 세션별 공식 순위와 클래스·팀 필터를 제공합니다.</p>'
-                '<style>.session-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}'
-                '.session-tabs button{background:#18273e;color:#edf2ff;border:1px solid #48627e;'
-                'border-radius:5px;padding:12px;font:inherit;cursor:pointer}'
-                '.session-tabs button[aria-selected=true]{background:#68e5cc;color:#102b2c;font-weight:700}'
-                '.session-tabs button:focus-visible{outline:2px solid white;outline-offset:3px}'
-                '#session-frame{width:100%;height:80vh;min-height:600px;border:1px solid #40506c;border-radius:8px}'
-                '</style><div class="session-tabs" role="tablist" aria-label="대회 세션">'
-                +''.join(tabs)+'</div><p><a id="session-link" target="_blank" rel="noopener">세션만 새 창으로 열기</a></p>'
-                f'<div id="session-panel" role="tabpanel" aria-labelledby="session-{selected}">'
-                '<iframe id="session-frame" title="세션 리포트"></iframe></div>'
-                '<script>const tabs=[...document.querySelectorAll("[role=tab]")];'
-                'function select(tab){for(const t of tabs){t.setAttribute("aria-selected",String(t===tab));t.tabIndex=t===tab?0:-1;}'
-                'const frame=document.querySelector("#session-frame");frame.src=tab.dataset.src;frame.title=tab.dataset.title;'
-                'document.querySelector("#session-panel").setAttribute("aria-labelledby",tab.id);'
-                'document.querySelector("#session-link").href=tab.dataset.src;}'
-                'for(const [i,tab] of tabs.entries()){tab.addEventListener("click",()=>select(tab));'
-                'tab.addEventListener("keydown",e=>{let next;if(e.key==="ArrowRight")next=(i+1)%tabs.length;'
-                'if(e.key==="ArrowLeft")next=(i+tabs.length-1)%tabs.length;'
-                'if(e.key==="Home")next=0;if(e.key==="End")next=tabs.length-1;'
-                'if(next!==undefined){e.preventDefault();select(tabs[next]);tabs[next].focus();}});}'
-                'select(tabs.find(t=>t.getAttribute("aria-selected")==="true"));</script>')
-        write(directory/'index.html', page(title, body))
+        write(directory/'index.html', render_event(title, sessions))
         link = html.escape((directory/'index.html').relative_to(output).as_posix(), quote=True)
         links.append(f'<li><a href="{link}">{html.escape(title)}</a> · {len(sessions)}개 세션</li>')
     write(output/'index.html', page('WEC 대회 리포트', '<a href="../index.html">F1 · WEC</a><ul>'+''.join(links)+'</ul>'))
