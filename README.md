@@ -14,7 +14,7 @@ python -m venv .venv
 .venv/bin/python -m unittest discover -s tools -p 'test_*.py'
 .venv/bin/python tools/wec_report.py --year 2026 --event MONZA
 .venv/bin/python tools/weekend_report.py --output-root .report-staging
-.venv/bin/python tools/review_pipeline.py --staging .report-staging --destination reports --optional
+.venv/bin/python -c 'import shutil; shutil.copytree(".report-staging", "reports", dirs_exist_ok=True)'
 .venv/bin/python tools/build_archive.py
 .venv/bin/python tools/build_portal.py
 ```
@@ -52,9 +52,12 @@ WEC는 FIA WEC 세션의 Analysis CSV와 있으면 Classification CSV를 사용�
 
 공개 WEC 기록은 인증 없이 수집합니다. F1 접근 제한 시 기존 F1 보고서를 유지합니다.
 필요한 OpenF1 인증은 저장소 Actions secrets의 `OPENF1_CLIENT_ID`, `OPENF1_CLIENT_SECRET`으로 설정합니다.
-기존 F1 선택적 AI 첨삭은 `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`가 모두 있을 때 사용합니다.
-키 없이 기본 보고서 생성이 가능합니다. 상세 F1 동작은 [기존 자동화 문서](reports/AUTOMATION.md)를 참고하세요.
-그 문서의 이전 '외부 게시 없음' 설명 대신 이 저장소에서는 별도 Pages 워크플로가 게시를 담당합니다.
+기본 보고서 생성에는 Claude API 키가 필요 없습니다. F1·WEC 수집·저장 후 Claude CLI로
+**review → rescue → 테스트·오프라인 재생성 → 검증된 수정 자동 커밋**을 추가 실행합니다.
+`adversarial-review`는 사용하지 않습니다. 기존 API 키 기반 첨삭 단계는 제거했습니다.
+상세 설정은 [Claude 자동 검토·수정](docs/CLAUDE_AUTOMATION.md)을 참고하세요.
+F1 지표 해석은 [기존 자동화 문서](reports/AUTOMATION.md)를 참고하세요.
+그 문서의 이전 실행·게시 설명 대신 이 저장소에서는 위 통합 워크플로와 별도 Pages 워크플로를 사용합니다.
 
 ## 검증 범위
 

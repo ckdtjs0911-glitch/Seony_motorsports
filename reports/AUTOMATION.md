@@ -76,44 +76,13 @@ python -m venv .venv
 현재 저장된 멕시코 예시(`weekend-1298`)에는 이전에 수집한 레이스 22명 데이터만 있습니다.
 FP1·FP2·FP3·퀄리파잉은 API 라이브 접근 제한이 풀린 뒤 온라인으로 수집해야 합니다.
 
-## 자동 AI 교차 첨삭
+## Claude 자동 검토·수정
 
-두 API 키가 모두 설정된 경우 새 데이터를 수집한 뒤 **Claude 초안 → Codex 검토 → Claude 최종**을 순서대로
-API로 실행합니다. Windows에서 로그인한 Claude Code 프로그램을 원격 실행하는 방식은
-아니며, 구독 로그인과 별도의 OpenAI·Anthropic API 과금이 적용됩니다.
-
-저장소 Settings → Secrets and variables → Actions → **New repository secret**에 등록:
-
-- `OPENAI_API_KEY`: OpenAI API 키
-- `ANTHROPIC_API_KEY`: Anthropic API 키
-
-키 값은 채팅·코드·커밋에 넣지 않습니다. 현재 클라우드 환경이 아닌 **GitHub 저장소의
-Actions secrets**에 설정해야 예약 작업에서 사용할 수 있습니다.
-모델은 기본 `gpt-6.1-sol`(Codex), `claude-opus-5-5`(Claude)를 사용하며, 계정에서 접근 가능한 모델로
-바꾸려면 Actions variables에 `REPORT_CODEX_MODEL`, `REPORT_CLAUDE_MODEL`을 설정합니다.
-Claude 기본 모델은 안전 분류기가 요청을 거절하면 Anthropic이 권장하는 다른 모델로 서버에서 다시 실행합니다(`fallbacks: "default"`).
-키가 없으면 AI 첨삭을 건너뛰고 기본 보고서를 정상 저장합니다. 인증 오류·API 한도·모델 거부·
-출력 검증 실패 시에도 첨삭 전 기본 보고서를 저장하고 상태를 명시합니다. 키를 추가하면
-다음 실행부터 AI 첨삭이 적용됩니다. OpenF1 수집 자체가 실패한 경우에는 기존 보고서를 유지합니다.
-
-AI는 원본에서 계산한 사실 문장의 표현을 작성·첨삭하며, 수치와 선수명은 보호 토큰으로
-유지한 뒤 코드가 삽입합니다. 표·차트·데이터 계산 코드 자체를 AI가 자동 수정하지 않습니다.
-Codex의 구조·UI 검토 의견과 Claude 최종 단계의 반영·미반영 기록은 `editorial-review.json`에 남기고, 코드 수정이 필요한 사항은
-별도 개발 검토 대상으로 유지합니다. 교차 검토는 공식 기록 확인을 대신하지 않습니다.
-
-수집 결과는 먼저 `.report-staging/`에서 생성됩니다. AI 첨삭이 성공하면 첨삭본을,
-키가 없거나 AI 첨삭이 실패하면 기본 보고서를 `reports/`로 옮겨 자동 커밋합니다.
-실패한 AI 문장은 반영하지 않으며, `editorial-review.json`과 HTML에 미첨삭 상태를 기록합니다.
-예약 실행은 `--optional` 모드이며, 옵션 없이 직접 실행하면 기존의 엄격 검증 모드를 사용할 수 있습니다.
-동일한 데이터·세션 상태·생성 코드·모델의 승인 기록이 있으면 재사용하여 중복 API 호출을 줄입니다.
-새 데이터마다 보통 API 세 번을 호출합니다. 원본 전체 랩 배열 대신 요약 사실만 전송합니다.
-각 단계의 출력·모델·검토 시각을 해당 주말의 `editorial-review.json`에 보관합니다.
-
-로컬 검증:
-
-```bash
-.venv/bin/python -m unittest discover -s tools -p 'test_*.py'
-```
+이 저장소는 F1·WEC 보고서 저장 후 Claude CLI의 review → rescue를 실행합니다.
+테스트와 원본 기록 기반 재생성을 통과한 수정만 자동 커밋하며, 반대 관점 검토는 실행하지 않습니다.
+인증에는 이 저장소의 `CLAUDE_CODE_OAUTH_TOKEN` 시크릿을 사용합니다.
+기존 API 키 기반 첨삭은 제거했습니다. 과거 editorial-review.json은 이전 실행 기록입니다.
+현재 실행·인증·결과 확인 방법은 [Claude 자동화 문서](../docs/CLAUDE_AUTOMATION.md)를 참고하세요.
 
 ## 사용 타이어와 선수별 한줄 평
 

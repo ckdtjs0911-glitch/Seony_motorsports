@@ -13,11 +13,13 @@ on:
         type: string
 permissions:
   contents: write
-concurrency:
-  group: motorsport-reports
-  cancel-in-progress: false
 jobs:
   reports:
+    outputs:
+      source_sha: ${{ steps.report_commit.outputs.sha }}
+    concurrency:
+      group: motorsport-reports
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
@@ -34,11 +36,9 @@ jobs:
         env:
           OPENF1_CLIENT_ID: ${{ secrets.OPENF1_CLIENT_ID }}
           OPENF1_CLIENT_SECRET: ${{ secrets.OPENF1_CLIENT_SECRET }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           python tools/weekend_report.py --output-root .report-staging
-          python tools/review_pipeline.py --staging .report-staging --destination reports --optional
+          python -c 'import shutil; shutil.copytree(".report-staging", "reports", dirs_exist_ok=True)'
           python tools/build_archive.py
           python tools/build_portal.py
       - name: WEC reports
@@ -66,6 +66,7 @@ jobs:
           path: reports/
           retention-days: 30
       - name: Commit generated reports
+        id: report_commit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -74,6 +75,16 @@ jobs:
             git commit -m 'Update motorsport reports'
             git push
           fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Report collection failures
         if: steps.f1.outcome == 'failure' || steps.wec.outcome == 'failure'
         run: exit 1
+  claude-review:
+    needs: reports
+    if: ${{ !cancelled() && needs.reports.outputs.source_sha != '' }}
+    uses: ./.github/workflows/claude-report-review.yml
+    with:
+      artifact_name: motorsport-reports
+      source_sha: ${{ needs.reports.outputs.source_sha }}
+    secrets:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
