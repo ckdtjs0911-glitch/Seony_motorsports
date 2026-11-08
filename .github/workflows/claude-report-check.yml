@@ -1,0 +1,51 @@
+name: Claude manual report review
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install requests==2.32.4
+      - run: npm install --global @anthropic-ai/claude-code@2.1.319
+      - name: Review existing reports without generating or modifying them
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          report_commit=$(git log -1 --format=%H -- reports/wec)
+          test -n "$report_commit"
+          python tools/claude_report_review.py --compare-ref "${report_commit}^" --output-dir "$RUNNER_TEMP/claude-manual-review"
+      - name: Require completed reviews
+        shell: python
+        run: |
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['RUNNER_TEMP']) / 'claude-manual-review' / 'status.json'
+          status = json.loads(path.read_text())
+          for mode in ('review', 'rescue'):
+              item = status['reviews'][mode]
+              print(mode, item['status'], item.get('reason', ''))
+              if item['status'] != 'completed':
+                  raise SystemExit(1)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('Claude reviewed existing reports. No report generation, code changes, or publication was performed.\n')
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: claude-manual-report-review
+          path: ${{ runner.temp }}/claude-manual-review/
+          if-no-files-found: error
+          retention-days: 30
