@@ -1,0 +1,39 @@
+name: Claude connection check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Claude Code CLI
+        run: npm install --global @anthropic-ai/claude-code@2.1.319
+      - name: Verify Claude authentication with one request
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        working-directory: ${{ runner.temp }}
+        shell: python
+        run: |
+          import json, os, subprocess, sys
+          if not os.environ.get('CLAUDE_CODE_OAUTH_TOKEN'):
+              sys.exit('Claude OAuth Secret is missing or empty.')
+          try:
+              call = subprocess.run(
+                  ['claude', '-p', 'Reply with exactly CLAUDE_CONNECTION_OK. Do not use tools.',
+                   '--output-format', 'json', '--tools', '', '--max-turns', '1'],
+                  capture_output=True, text=True, timeout=120)
+              result = json.loads(call.stdout)
+          except (subprocess.TimeoutExpired, json.JSONDecodeError):
+              sys.exit('Claude request timed out or returned an unexpected response. No credentials were logged.')
+          if call.returncode or result.get('is_error'):
+              sys.exit('Claude request failed. Check OAuth token validity and account access. No credentials were logged.')
+          if result.get('result', '').strip() != 'CLAUDE_CONNECTION_OK':
+              sys.exit('Claude responded but the expected verification text was not received.')
+          print('CLAUDE_CONNECTION_OK: authenticated Claude request succeeded.')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('Claude OAuth connection verified by one successful request. Automatic reports remain paused.\n')
