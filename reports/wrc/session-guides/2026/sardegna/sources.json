@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "shakedown",
+    "title": "셰이크다운 관측 요약",
+    "kind": "shakedown",
+    "file": "shakedown.html",
+    "record_count": 52,
+    "stage_status": "공식 런 기록 / 독립 관측 집계",
+    "source_fingerprint": "18b873200a63afc3c91c07c4f4f0fe474cf8c4cca98f3286c7463ab6d1ba3d0c",
+    "report_sha256": "5da409c5704297b599af9f5803cecafc8df512e7d938389b74d650d6b628f541",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "shakedown",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/shakedowntimes.json?shakedownNumber=1",
+        "sha256": "3b65ae23dd081a194831b1a4cf8d2bf1f425b86c9c28925f51d856004eb36ee6",
+        "retrieved_at": "2026-11-20T09:47:20.942517+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS01",
+    "title": "SS1 · ITTIRI ARENA SHOW",
+    "kind": "stage",
+    "file": "SS01.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "f5860e31fddf8b42190b01bc6a2faacbe0a483734037d3946925fb96a0fd5dfa",
+    "report_sha256": "252eaf4c2d4f36b4ac23228409e478f37cbdb2b62979a3d593c0416b54c8e1e4",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS01-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11698/stagetimes.json?rallyId=715",
+        "sha256": "8f3a651d97f0c95e9c207f185280bc67baca7df7039d6ee12c857080e2b13224",
+        "retrieved_at": "2026-11-20T09:47:21.025080+00:00"
+      },
+      {
+        "name": "SS01-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11698/results.json?rallyId=715",
+        "sha256": "d625bb50e74af9ecf081e3c1a304779872fd72d4003260208ad39f55616ad815",
+        "retrieved_at": "2026-11-20T09:47:20.608385+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS02",
+    "title": "SS2 · TULA - ERULA 1",
+    "kind": "stage",
+    "file": "SS02.html",
+    "record_count": 57,
+    "stage_status": "Interrupted",
+    "source_fingerprint": "6cef7fb9b5adce0c4a0515525c8d1d2ab16df85e1b82a9d5197bc3aab8057621",
+    "report_sha256": "c0710358bc57f3bd2cbe5d2f0f3d1faed5520bbe1af3914730388d139a4e21ba",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS02-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11699/stagetimes.json?rallyId=715",
+        "sha256": "d1d08234725c389fb4044f34217cc3f8f4574074013b43edc23b0d10e0dcf547",
+        "retrieved_at": "2026-11-20T09:47:21.131326+00:00"
+      },
+      {
+        "name": "SS02-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11699/results.json?rallyId=715",
+        "sha256": "0f10a653744f8efff4883711f97171a9f18921a2535f2d448f025244351c9aee",
+        "retrieved_at": "2026-11-20T09:47:21.601743+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS03",
+    "title": "SS3 · SU FILIGOSU - LERNO 1",
+    "kind": "stage",
+    "file": "SS03.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "44b8d083e3cdb79137bc9c927f6788581a2571ae2624b7beffbea5ee8e330c22",
+    "report_sha256": "41386f638a3e641c6eebf1dc13b97f0689a23ef4f39fd598b006666fa55dfa66",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS03-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11700/stagetimes.json?rallyId=715",
+        "sha256": "f24aea4e08338a4e88046f08f66d2eb922bba99fae4b93d47eeff7f568ee400e",
+        "retrieved_at": "2026-11-20T09:47:21.954116+00:00"
+      },
+      {
+        "name": "SS03-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11700/results.json?rallyId=715",
+        "sha256": "4b764cd0df3a64c6fe42f3ce03fd10e7f1b51ea36b7d9e8781a3aec59b26c28a",
+        "retrieved_at": "2026-11-20T09:47:21.913629+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS04",
+    "title": "SS4 · MONTI DI ALA' - SA CONCHEDDA - LERNO 1",
+    "kind": "stage",
+    "file": "SS04.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "a57d30d477c482a8f882413cf911f942a1cdd0829aac4eba9512d49a100a6ff4",
+    "report_sha256": "50ce7fab9a9d1efd0deef03a62827c2bca4ea050229b37e43416ac09effd8b0c",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS04-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11701/stagetimes.json?rallyId=715",
+        "sha256": "881330e157a2d2bbb61f1d20a4f5fa702c6ef9c5f02dba661f77ae6c709452fc",
+        "retrieved_at": "2026-11-20T09:47:22.091558+00:00"
+      },
+      {
+        "name": "SS04-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11701/results.json?rallyId=715",
+        "sha256": "71ab599682b019ac3c73476ea0f743cc08957a0dc67f7b1fdeb2bd766d85a837",
+        "retrieved_at": "2026-11-20T09:47:22.534306+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS05",
+    "title": "SS5 · TULA - ERULA 2",
+    "kind": "stage",
+    "file": "SS05.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "2891cf01500ec4a1747ab2ead94df79cbd7e40478fde279b7c291c501734ff2c",
+    "report_sha256": "353e5c4cdcfc3c44a73cc2ae37ff0b2cf5d67cfd07acc1848895a9d9a3349f8d",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS05-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11702/stagetimes.json?rallyId=715",
+        "sha256": "c5e1552bdf105e0bee3771d79d42c0e0fa5a4cf68611fdac04b8cfc5c24ae94d",
+        "retrieved_at": "2026-11-20T09:47:22.874180+00:00"
+      },
+      {
+        "name": "SS05-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11702/results.json?rallyId=715",
+        "sha256": "ca37f23a351705a1f91d7165bbc993d84d325ebb1a6f5d0457b197c966c41c25",
+        "retrieved_at": "2026-11-20T09:47:22.891253+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS06",
+    "title": "SS6 · SU FILIGOSU - LERNO 2",
+    "kind": "stage",
+    "file": "SS06.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "f90ee71cf7c43ce486e50a26e17528eb837b88408d726bea04193837132d3645",
+    "report_sha256": "40eca0351aff41a07921d4ea0651db88b47404df919ede7757d1013a2842e138",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS06-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11703/stagetimes.json?rallyId=715",
+        "sha256": "93462e22314ed3d1319716cc6394cfcd542c0fe50c9c830cff93bbbaffb69814",
+        "retrieved_at": "2026-11-20T09:47:23.147984+00:00"
+      },
+      {
+        "name": "SS06-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11703/results.json?rallyId=715",
+        "sha256": "4a8b88374ae4d63ab0c2ae66d5b1ef0508a38f9e874d25b97a9ea8b48f75e51e",
+        "retrieved_at": "2026-11-20T09:47:23.453559+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS07",
+    "title": "SS7 · MONTI DI ALA' - SA CONCHEDDA - LERNO 2",
+    "kind": "stage",
+    "file": "SS07.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "e9b4a77af549120b2e815349ed8c5bca4d58cb62a0dbb45846327f41e6091bda",
+    "report_sha256": "a72cd7af8ad66be89f79e2a2537a2ac7ee53cf9e63bc51a6f82e8e450fe78d6f",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS07-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11704/stagetimes.json?rallyId=715",
+        "sha256": "ee48ec36a58021a27836868c8b37f5bdcce280c06a813c4c8a99a07527a69c4b",
+        "retrieved_at": "2026-11-20T09:47:23.837197+00:00"
+      },
+      {
+        "name": "SS07-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11704/results.json?rallyId=715",
+        "sha256": "2ecfb1d7db6593179433fa472303e7490f5103d81cfd1a94f870c8b482e893f8",
+        "retrieved_at": "2026-11-20T09:47:23.779529+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS08",
+    "title": "SS8 · LERNO-SA CONCHEDDA-MONTI DI ALA' 1",
+    "kind": "stage",
+    "file": "SS08.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "067f8982c0d2bdd40e2ac35291a4c7701ea5ebeebbfb9f01207dcab85d0ede61",
+    "report_sha256": "9397f721044aa87e54c1b2b172e4c907c7a8f658c67ee955f51e6918042e3970",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS08-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11705/stagetimes.json?rallyId=715",
+        "sha256": "379aec0667034ff1bb11e41b4aa58a5d8c2d58d5889db4dd5e53579999eeb820",
+        "retrieved_at": "2026-11-20T09:47:24.045320+00:00"
+      },
+      {
+        "name": "SS08-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11705/results.json?rallyId=715",
+        "sha256": "fa7527e97c21830a84ab1cabf0a9a4777b209bf6b6ae1cbb4c1ab805298e70c2",
+        "retrieved_at": "2026-11-20T09:47:23.960429+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS09",
+    "title": "SS9 · COILUNA - LOELLE 1",
+    "kind": "stage",
+    "file": "SS09.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "070f43033d21efe433082d1cc1442914070d059e1fb44c8682a5c08262a1e476",
+    "report_sha256": "cf9afef9182f725f2b40b21ee9ced16ba30b2d7093d73eff3c880b987d0b9911",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS09-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11706/stagetimes.json?rallyId=715",
+        "sha256": "f905094b2735203b79ef936aba2d765930efc358251a8ad9a2f17502caa41358",
+        "retrieved_at": "2026-11-20T09:47:24.790392+00:00"
+      },
+      {
+        "name": "SS09-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11706/results.json?rallyId=715",
+        "sha256": "9344af76a2aade058988f89b406567623b4923510c02cae3efdb54a51e352b0e",
+        "retrieved_at": "2026-11-20T09:47:24.764696+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS10",
+    "title": "SS10 · SOLORCHE' 1",
+    "kind": "stage",
+    "file": "SS10.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "1e887382f70f27a345c4dc685a5e4e780465dc4fda7764a3f731348d996add37",
+    "report_sha256": "f9968499e81edea1f4044b2f0dba0b4c8c7429511bbfbc2db0f5a63182b986f6",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS10-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11707/stagetimes.json?rallyId=715",
+        "sha256": "562b6e70f4d448712c2fab44ee291a382ac764673532cd24e8145fddb5fc9d44",
+        "retrieved_at": "2026-11-20T09:47:24.926259+00:00"
+      },
+      {
+        "name": "SS10-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11707/results.json?rallyId=715",
+        "sha256": "a47b32f0b63a65f34dbe13f1a7e102fd3046215298c7c2add4b12c369b9ed882",
+        "retrieved_at": "2026-11-20T09:47:25.054960+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS11",
+    "title": "SS11 · LERNO-SA CONCHEDDA-MONTI DI ALA' 2",
+    "kind": "stage",
+    "file": "SS11.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "9998c3fbb1d9dec433e428a39157346d71b639f5b7a381f6900c1ccfd4436b71",
+    "report_sha256": "8fa612838e045e80c5aa98a93a785cbf90f0aec75ccdd8039e5a58203446426e",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS11-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11708/stagetimes.json?rallyId=715",
+        "sha256": "b4a8426b9aa11bfda1318171d9aa2415c8f4021759681613ce64696e091380c1",
+        "retrieved_at": "2026-11-20T09:47:25.728356+00:00"
+      },
+      {
+        "name": "SS11-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11708/results.json?rallyId=715",
+        "sha256": "b8576294a213f2f6a7efbec4592a6681c0af13127d833dca14332c09d5a79c95",
+        "retrieved_at": "2026-11-20T09:47:25.768555+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS12",
+    "title": "SS12 · COILUNA - LOELLE 2",
+    "kind": "stage",
+    "file": "SS12.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "096969ecac22fe59435dab95a53433cf21b2a8400ff246af3e947b25e096fce9",
+    "report_sha256": "a3b5711f303880abf07e86687d481768f5a59baa0be69bc68aafac34f1d7cd59",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS12-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11709/stagetimes.json?rallyId=715",
+        "sha256": "b866a122a110493dd262429271f613b77919cc8442b337f56b97f1d9d14ab3b5",
+        "retrieved_at": "2026-11-20T09:47:25.917426+00:00"
+      },
+      {
+        "name": "SS12-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11709/results.json?rallyId=715",
+        "sha256": "89c42ffb80a5ae05570d6fa949962d456317f994b74422b41a46432dbe6049cd",
+        "retrieved_at": "2026-11-20T09:47:26.000314+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS13",
+    "title": "SS13 · SOLORCHE' 2",
+    "kind": "stage",
+    "file": "SS13.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "e42944a18724d4f80fb9cc8f0ca858fabb3922856c85b7df133d9a15217362ed",
+    "report_sha256": "feb08c90bc3019be7b35e84654fefe369ab42de9a508e33e3a73df4526f667c3",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS13-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11710/stagetimes.json?rallyId=715",
+        "sha256": "c2665bcc5c70ed2f21102f8df03a0c6eb92ab1e7be79e95a5986827faf688bd2",
+        "retrieved_at": "2026-11-20T09:47:26.712568+00:00"
+      },
+      {
+        "name": "SS13-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11710/results.json?rallyId=715",
+        "sha256": "4ecc5a7bb0a119346e5c57c601ca6fe5c244c3c784131f4b27145f027340446b",
+        "retrieved_at": "2026-11-20T09:47:26.683147+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS14",
+    "title": "SS14 · OSILO - TERGU 1",
+    "kind": "stage",
+    "file": "SS14.html",
+    "record_count": 51,
+    "stage_status": "Completed",
+    "source_fingerprint": "dbcc29b907a145f5bfa76be9357ca4c9f4c2a8685cdddd769f542edcc96e9a11",
+    "report_sha256": "cfb11707e2aa1df96369e0fbefba7ed69c82611c10410a1a4934c93fcf899160",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS14-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11711/stagetimes.json?rallyId=715",
+        "sha256": "d5edc3fcbdc1776a796f3828cb358fc486878c534625ef8978fbec6922acab91",
+        "retrieved_at": "2026-11-20T09:47:26.881268+00:00"
+      },
+      {
+        "name": "SS14-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11711/results.json?rallyId=715",
+        "sha256": "97a054b2203632d40f92dab7bf955a72c6064b84cd6de6c7242ee0eaead757b2",
+        "retrieved_at": "2026-11-20T09:47:26.928368+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS15",
+    "title": "SS15 · SASSARI - ARGENTIERA 1",
+    "kind": "stage",
+    "file": "SS15.html",
+    "record_count": 51,
+    "stage_status": "Completed",
+    "source_fingerprint": "e4541549f8229fb129fe6f63c4b1192ab6a89adefda544a91d658a908bd6dc65",
+    "report_sha256": "10b797a4fd8ce63185f39fe145da3cc4f7d9a4614bc1481cbebf145d6bbc88d4",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS15-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11712/stagetimes.json?rallyId=715",
+        "sha256": "8dddf28274ae43c6705aec636b627da827e86e050649614a7e7d3b3a0d6690b2",
+        "retrieved_at": "2026-11-20T09:47:27.663339+00:00"
+      },
+      {
+        "name": "SS15-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11712/results.json?rallyId=715",
+        "sha256": "02a19db07a0ff7e3f0b6532303a543fcacf8c24fb84cea7592ee464565fab100",
+        "retrieved_at": "2026-11-20T09:47:27.202926+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS16",
+    "title": "SS16 · OSILO - TERGU 2",
+    "kind": "stage",
+    "file": "SS16.html",
+    "record_count": 51,
+    "stage_status": "Completed",
+    "source_fingerprint": "9270f174108375e33ddfc880dce04754f895f6e6e6d28dec0b598d9413e2c480",
+    "report_sha256": "1964f94b553bbe32f8aa507b30024603d3b3bdb97b0a6741f29457e22fc65071",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS16-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11713/stagetimes.json?rallyId=715",
+        "sha256": "c19f81ad5b4d08b70f930e41edddf482450209b23e46d331244cb2829bdbb694",
+        "retrieved_at": "2026-11-20T09:47:27.792213+00:00"
+      },
+      {
+        "name": "SS16-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11713/results.json?rallyId=715",
+        "sha256": "ba8affca24b633139f25e22c63bdb84b2f44cbd68d471c18201e013ca7f9f392",
+        "retrieved_at": "2026-11-20T09:47:27.858370+00:00"
+      }
+    ]
+  },
+  {
+    "id": "SS17",
+    "title": "SS17 · SASSARI - ARGENTIERA 2 / Wolf Pw Stage",
+    "kind": "stage",
+    "file": "SS17.html",
+    "record_count": 51,
+    "stage_status": "Interrupted",
+    "source_fingerprint": "c4a86668091a1d82f45782d8fd5982eb98b1d5a2d42056e5a72afc54459de54c",
+    "report_sha256": "291ab96c94778c669d740c2bac64d3b12121b15af75945816cbe480aef424f9f",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "SS17-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11714/stagetimes.json?rallyId=715",
+        "sha256": "cb95355e004ff018c8f2c218d3fcb41194c51de23fe83243b3659abb887eea96",
+        "retrieved_at": "2026-11-20T09:47:28.234011+00:00"
+      },
+      {
+        "name": "SS17-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11714/results.json?rallyId=715",
+        "sha256": "670692769a01853ae68a09ad749d87fd75b93393d5c44bfda593ebe8364d4ff0",
+        "retrieved_at": "2026-11-20T09:47:28.655714+00:00"
+      }
+    ]
+  },
+  {
+    "id": "day1",
+    "title": "2026-10-01 일일 요약",
+    "kind": "day",
+    "file": "day1.html",
+    "record_count": 57,
+    "stage_status": "Completed",
+    "source_fingerprint": "b66b0a5daca61f15a009e6e8ebe6f0c4e5ae14b9931f78c116e24162500d34af",
+    "report_sha256": "b0bd8b6ea2ddaefd0705bb93d28c69936f100c47994775f6fed4d8b9a7ae0d0c",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "day1",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraryLegs/2166/resultsofleg.json?rallyId=715&stageId=11698",
+        "sha256": "4a280506de0df2d0681c1069d457b632b73bc132581837fafe6e045331daf6a9",
+        "retrieved_at": "2026-11-20T09:47:28.791310+00:00"
+      },
+      {
+        "name": "SS01-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11698/results.json?rallyId=715",
+        "sha256": "d625bb50e74af9ecf081e3c1a304779872fd72d4003260208ad39f55616ad815",
+        "retrieved_at": "2026-11-20T09:47:20.608385+00:00"
+      }
+    ]
+  },
+  {
+    "id": "day2",
+    "title": "2026-10-02 일일 요약",
+    "kind": "day",
+    "file": "day2.html",
+    "record_count": 56,
+    "stage_status": "Completed",
+    "source_fingerprint": "11df0ef46210fd867a73688f609db79e88ba618f988366e6706b0e085826ba4a",
+    "report_sha256": "4c7a0c875c7ac853b322dbbab2a3c418ce2a05fdff1810778e6bbd5cd8fa034c",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "day2",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraryLegs/2167/resultsofleg.json?rallyId=715&stageId=11704",
+        "sha256": "095339660d9e8806a32e38617f6d1ae941d4ad22bf3c46cc4d6009e8ff390415",
+        "retrieved_at": "2026-11-20T09:47:28.788489+00:00"
+      },
+      {
+        "name": "SS07-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11704/results.json?rallyId=715",
+        "sha256": "2ecfb1d7db6593179433fa472303e7490f5103d81cfd1a94f870c8b482e893f8",
+        "retrieved_at": "2026-11-20T09:47:23.779529+00:00"
+      }
+    ]
+  },
+  {
+    "id": "day3",
+    "title": "2026-10-03 일일 요약",
+    "kind": "day",
+    "file": "day3.html",
+    "record_count": 51,
+    "stage_status": "Completed",
+    "source_fingerprint": "610d52cae5de5500ab26aa3a303400e85b942bb6fea24565570c250fcbbb5b8b",
+    "report_sha256": "cb221960da2d1e4f95066763fdfa0a9dcfd999b72a189c7f823f80275c10a4a9",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "day3",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraryLegs/2168/resultsofleg.json?rallyId=715&stageId=11710",
+        "sha256": "4ef3c789f0bb84a08592f233938f2ded5e9d8a3072795351a6651f8c15922d09",
+        "retrieved_at": "2026-11-20T09:47:29.299019+00:00"
+      },
+      {
+        "name": "SS13-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11710/results.json?rallyId=715",
+        "sha256": "4ecc5a7bb0a119346e5c57c601ca6fe5c244c3c784131f4b27145f027340446b",
+        "retrieved_at": "2026-11-20T09:47:26.683147+00:00"
+      }
+    ]
+  },
+  {
+    "id": "day4",
+    "title": "2026-10-04 일일 요약",
+    "kind": "day",
+    "file": "day4.html",
+    "record_count": 44,
+    "stage_status": "Interrupted",
+    "source_fingerprint": "25825f1d1d79af9d907c8dbfbb5818abf7cece8cc3d945ff7c4bb17af03c2194",
+    "report_sha256": "6b1818fde5d0ea77b94a9032339526f28c18fa92bd506aadb8757b1adde72af0",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "day4",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraryLegs/2169/resultsofleg.json?rallyId=715&stageId=11714",
+        "sha256": "fc68c4c4fa74ce9ff9f8757c49208997713ccb5fe07f26f06f63520e76d8fc03",
+        "retrieved_at": "2026-11-20T09:47:29.634640+00:00"
+      },
+      {
+        "name": "SS17-overall",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11714/results.json?rallyId=715",
+        "sha256": "670692769a01853ae68a09ad749d87fd75b93393d5c44bfda593ebe8364d4ff0",
+        "retrieved_at": "2026-11-20T09:47:28.655714+00:00"
+      }
+    ]
+  },
+  {
+    "id": "rally-final",
+    "title": "대회 종합 요약",
+    "kind": "final",
+    "file": "rally-final.html",
+    "record_count": 44,
+    "stage_status": "Interrupted",
+    "source_fingerprint": "7c890ee5dd9d1fedf7018e15e784c5da15d8b1b0622f8c40c6ba809ee8167d53",
+    "report_sha256": "b178cc39904bf6037a3ad62675ad2601d38b427da3fc4db7758a3024c6e3c3db",
+    "sources": [
+      {
+        "name": "entries",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/entries.json",
+        "sha256": "ca9c7791669a42534fb468a77faf203cd1c1dfd175a3c261bac60bfee6799122",
+        "retrieved_at": "2026-11-20T09:47:20.045843+00:00"
+      },
+      {
+        "name": "event",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647.json",
+        "sha256": "454cbc566a7681ac4f3e9180be65069d18d338091121e367887372d37d7a25b6",
+        "retrieved_at": "2026-11-20T09:47:20.148995+00:00"
+      },
+      {
+        "name": "itinerary",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/itineraries/1495.json",
+        "sha256": "47ed8b4dd6fb42107e6f515f739c572d71d640ad9e803ccafb6bb44a3ba278e4",
+        "retrieved_at": "2026-11-20T09:47:20.061335+00:00"
+      },
+      {
+        "name": "final-results",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/rallies/715/results.json",
+        "sha256": "84b2a1b82d3aee7f79ba04d498ef21af82f0126f79e4b150a68bff6fd2b891bd",
+        "retrieved_at": "2026-11-20T09:47:20.037863+00:00"
+      },
+      {
+        "name": "penalties",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/penalties.json",
+        "sha256": "0fc8fb199316d964be4be51d5d4d0fcdaf6cd199dbdbe13f5d364d9aff802085",
+        "retrieved_at": "2026-11-20T09:47:20.110833+00:00"
+      },
+      {
+        "name": "retirements",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/retirements.json",
+        "sha256": "acd844cab988800f59eda68642a5aeb7a0edce90013c3e500caf506d20bfe3a3",
+        "retrieved_at": "2026-11-20T09:47:20.115204+00:00"
+      },
+      {
+        "name": "SS01-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11698/stagetimes.json?rallyId=715",
+        "sha256": "8f3a651d97f0c95e9c207f185280bc67baca7df7039d6ee12c857080e2b13224",
+        "retrieved_at": "2026-11-20T09:47:21.025080+00:00"
+      },
+      {
+        "name": "SS02-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11699/stagetimes.json?rallyId=715",
+        "sha256": "d1d08234725c389fb4044f34217cc3f8f4574074013b43edc23b0d10e0dcf547",
+        "retrieved_at": "2026-11-20T09:47:21.131326+00:00"
+      },
+      {
+        "name": "SS03-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11700/stagetimes.json?rallyId=715",
+        "sha256": "f24aea4e08338a4e88046f08f66d2eb922bba99fae4b93d47eeff7f568ee400e",
+        "retrieved_at": "2026-11-20T09:47:21.954116+00:00"
+      },
+      {
+        "name": "SS04-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11701/stagetimes.json?rallyId=715",
+        "sha256": "881330e157a2d2bbb61f1d20a4f5fa702c6ef9c5f02dba661f77ae6c709452fc",
+        "retrieved_at": "2026-11-20T09:47:22.091558+00:00"
+      },
+      {
+        "name": "SS05-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11702/stagetimes.json?rallyId=715",
+        "sha256": "c5e1552bdf105e0bee3771d79d42c0e0fa5a4cf68611fdac04b8cfc5c24ae94d",
+        "retrieved_at": "2026-11-20T09:47:22.874180+00:00"
+      },
+      {
+        "name": "SS06-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11703/stagetimes.json?rallyId=715",
+        "sha256": "93462e22314ed3d1319716cc6394cfcd542c0fe50c9c830cff93bbbaffb69814",
+        "retrieved_at": "2026-11-20T09:47:23.147984+00:00"
+      },
+      {
+        "name": "SS07-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11704/stagetimes.json?rallyId=715",
+        "sha256": "ee48ec36a58021a27836868c8b37f5bdcce280c06a813c4c8a99a07527a69c4b",
+        "retrieved_at": "2026-11-20T09:47:23.837197+00:00"
+      },
+      {
+        "name": "SS08-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11705/stagetimes.json?rallyId=715",
+        "sha256": "379aec0667034ff1bb11e41b4aa58a5d8c2d58d5889db4dd5e53579999eeb820",
+        "retrieved_at": "2026-11-20T09:47:24.045320+00:00"
+      },
+      {
+        "name": "SS09-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11706/stagetimes.json?rallyId=715",
+        "sha256": "f905094b2735203b79ef936aba2d765930efc358251a8ad9a2f17502caa41358",
+        "retrieved_at": "2026-11-20T09:47:24.790392+00:00"
+      },
+      {
+        "name": "SS10-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11707/stagetimes.json?rallyId=715",
+        "sha256": "562b6e70f4d448712c2fab44ee291a382ac764673532cd24e8145fddb5fc9d44",
+        "retrieved_at": "2026-11-20T09:47:24.926259+00:00"
+      },
+      {
+        "name": "SS11-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11708/stagetimes.json?rallyId=715",
+        "sha256": "b4a8426b9aa11bfda1318171d9aa2415c8f4021759681613ce64696e091380c1",
+        "retrieved_at": "2026-11-20T09:47:25.728356+00:00"
+      },
+      {
+        "name": "SS12-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11709/stagetimes.json?rallyId=715",
+        "sha256": "b866a122a110493dd262429271f613b77919cc8442b337f56b97f1d9d14ab3b5",
+        "retrieved_at": "2026-11-20T09:47:25.917426+00:00"
+      },
+      {
+        "name": "SS13-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11710/stagetimes.json?rallyId=715",
+        "sha256": "c2665bcc5c70ed2f21102f8df03a0c6eb92ab1e7be79e95a5986827faf688bd2",
+        "retrieved_at": "2026-11-20T09:47:26.712568+00:00"
+      },
+      {
+        "name": "SS14-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11711/stagetimes.json?rallyId=715",
+        "sha256": "d5edc3fcbdc1776a796f3828cb358fc486878c534625ef8978fbec6922acab91",
+        "retrieved_at": "2026-11-20T09:47:26.881268+00:00"
+      },
+      {
+        "name": "SS15-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11712/stagetimes.json?rallyId=715",
+        "sha256": "8dddf28274ae43c6705aec636b627da827e86e050649614a7e7d3b3a0d6690b2",
+        "retrieved_at": "2026-11-20T09:47:27.663339+00:00"
+      },
+      {
+        "name": "SS16-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11713/stagetimes.json?rallyId=715",
+        "sha256": "c19f81ad5b4d08b70f930e41edddf482450209b23e46d331244cb2829bdbb694",
+        "retrieved_at": "2026-11-20T09:47:27.792213+00:00"
+      },
+      {
+        "name": "SS17-stage",
+        "url": "https://p-p.redbull.com/rb-wrccom-lintegration-yv-prod/api/events/647/stages/11714/stagetimes.json?rallyId=715",
+        "sha256": "cb95355e004ff018c8f2c218d3fcb41194c51de23fe83243b3659abb887eea96",
+        "retrieved_at": "2026-11-20T09:47:28.234011+00:00"
+      }
+    ]
+  }
+]

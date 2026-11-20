@@ -1,0 +1,132 @@
+{
+  "checked_at": "2026-11-20T15:25:54.370Z",
+  "reports": [
+    {
+      "id": "shakedown",
+      "rows": 52,
+      "passed": true
+    },
+    {
+      "id": "SS01",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS02",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS03",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS04",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS05",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS06",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS07",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "SS08",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS09",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS10",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS11",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS12",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS13",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "SS14",
+      "rows": 51,
+      "passed": true
+    },
+    {
+      "id": "SS15",
+      "rows": 51,
+      "passed": true
+    },
+    {
+      "id": "SS16",
+      "rows": 51,
+      "passed": true
+    },
+    {
+      "id": "SS17",
+      "rows": 51,
+      "passed": true
+    },
+    {
+      "id": "day1",
+      "rows": 57,
+      "passed": true
+    },
+    {
+      "id": "day2",
+      "rows": 56,
+      "passed": true
+    },
+    {
+      "id": "day3",
+      "rows": 51,
+      "passed": true
+    },
+    {
+      "id": "day4",
+      "rows": 44,
+      "passed": true
+    },
+    {
+      "id": "rally-final",
+      "rows": 44,
+      "passed": true
+    }
+  ],
+  "crewChecks": 61,
+  "errors": [],
+  "external_requests": 0,
+  "desktop": "1440x1000",
+  "mobile": "390x844",
+  "offline": true,
+  "saved_copy": true,
+  "chapter00": {
+    "reports": 23,
+    "unit_tests_passed": 4,
+    "before_chapter01": true
+  }
+}
