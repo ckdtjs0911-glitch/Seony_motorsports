@@ -19,6 +19,7 @@ SOURCE_FILES = {
     "tools/report_charts.css",
     "tools/race_events.py",
     "tools/wec_report.py",
+    "tools/wec_insights.py",
     "tools/build_portal.py",
 }
 

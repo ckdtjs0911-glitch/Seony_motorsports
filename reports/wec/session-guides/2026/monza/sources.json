@@ -1,0 +1,321 @@
+[
+  {
+    "id": "202611061030_Free Practice 1",
+    "name": "Free Practice 1",
+    "file": "202611061030_Free Practice 1.html",
+    "cars": 35,
+    "observed_laps": 1075,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "f08de54850103a208ff060bdf011beb2ca96d72d1d72663ae8d4f1065b2669da",
+    "report_sha256": "30b144dae7980acc555291017f4e4ec5ccb5c320e19feb1330d21654fceaa360",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061030_Free%20Practice%201/23_Analysis_Free%20Practice%201.CSV",
+        "sha256": "c977430b9b3f4195955fad5b47d5af497e77300980fd45a455a709cb61b0c9d7"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061030_Free%20Practice%201/03_Classification_Free%20Practice%201.CSV",
+        "sha256": "8725f734bf5b6cfc541f74caeac4507e8b9c2b6be0a6f79a90a5b9d44ff39a7f"
+      },
+      {
+        "session": "202611061030_Free Practice 1",
+        "name": "Classification_Free Practice 1.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061030_Free%20Practice%201/03_Classification_Free%20Practice%201.PDF",
+        "retrieved_at": "2026-11-20T09:39:43.338840+00:00",
+        "sha256": "7604e1ba5a8dc72063d95e72ac5d4d229631a26f140b78e664be62b822b676e1"
+      },
+      {
+        "session": "202611061030_Free Practice 1",
+        "name": "TrackLimits_Free Practice 1.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061030_Free%20Practice%201/99_TrackLimits_Free%20Practice%201.CSV",
+        "retrieved_at": "2026-11-20T09:39:43.354481+00:00",
+        "sha256": "93718a30541ff1cfb45196ee0453cc493f46f1f72003990197b9aaed61a36fc6"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 49
+  },
+  {
+    "id": "202611061430_Free Practice 2",
+    "name": "Free Practice 2",
+    "file": "202611061430_Free Practice 2.html",
+    "cars": 35,
+    "observed_laps": 1448,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "4e0a0a95c41157fb122d8e328ff43cdf9701d7e38f3279282bfbada609c38aad",
+    "report_sha256": "3953e1685db6771cf4cf7067c623e0f0fd2630fe6e70403d37d71621c91852cd",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/23_Analysis_Free%20Practice%202.CSV",
+        "sha256": "881aa78d46871fa8503a840edc77ace3eecb1dcd12bbafb8bbb9af8268fe916f"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/03_Classification_Free%20Practice%202.CSV",
+        "sha256": "d467abd0314c68cb02fb703a146458a9ead52b73bb9db75bcba8e9d67baf41f0"
+      },
+      {
+        "session": "202611061430_Free Practice 2",
+        "name": "Classification_Free Practice 2.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/03_Classification_Free%20Practice%202.PDF",
+        "retrieved_at": "2026-11-20T09:39:43.693023+00:00",
+        "sha256": "1388cd8d7b97a1301d670dca06d0a344e55811204723ede7ad735a21560e6751"
+      },
+      {
+        "session": "202611061430_Free Practice 2",
+        "name": "TrackLimits_Free Practice 2.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611061430_Free%20Practice%202/99_TrackLimits_Free%20Practice%202.CSV",
+        "retrieved_at": "2026-11-20T09:39:43.395560+00:00",
+        "sha256": "221d9fbc531acc3761124cf1abb674eecb3700afeebbf183681d31bf24de72c2"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 50
+  },
+  {
+    "id": "202611071030_Free Practice 3",
+    "name": "Free Practice 3",
+    "file": "202611071030_Free Practice 3.html",
+    "cars": 35,
+    "observed_laps": 971,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "ea89c115d115f5e7fbc0fbbc4f187596b613dd4a2a947d6f5449dabb88b80a6e",
+    "report_sha256": "9bafa42ef5da41f768e86418215657aa04c68049db111c5c16fda46f2f2cdab0",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071030_Free%20Practice%203/23_Analysis_Free%20Practice%203.CSV",
+        "sha256": "9a524723ad4f532de2a042763366225c4c9a85f8496554cdc74fb12e9fc6a7ee"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071030_Free%20Practice%203/03_Classification_Free%20Practice%203.CSV",
+        "sha256": "111ef4ed16ade7c51985b5286f02c4cfe37b53d51b216300f0e61fe467003d2b"
+      },
+      {
+        "session": "202611071030_Free Practice 3",
+        "name": "Classification_Free Practice 3.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071030_Free%20Practice%203/03_Classification_Free%20Practice%203.PDF",
+        "retrieved_at": "2026-11-20T09:39:44.162534+00:00",
+        "sha256": "7507a12c521499b75af74774a486c58f159ef40068d4a855245ecabbf4de4a4e"
+      },
+      {
+        "session": "202611071030_Free Practice 3",
+        "name": "TrackLimits_Free Practice 3.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071030_Free%20Practice%203/99_TrackLimits_Free%20Practice%203.CSV",
+        "retrieved_at": "2026-11-20T09:39:43.880646+00:00",
+        "sha256": "5c9a053e9c477ea0f75be547d652c7cd6b58b49027dcd52e6cb8b4004812a9b1"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 56
+  },
+  {
+    "id": "202611071420_Qualifying LMGT3",
+    "name": "Qualifying LMGT3",
+    "file": "202611071420_Qualifying LMGT3.html",
+    "cars": 18,
+    "observed_laps": 109,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "6106b328f43a15baeba14147d5dc190c19629ca48305910f31524afe181e61af",
+    "report_sha256": "48b6dce41a4ac0c5aea91086ed5b2c9fb1904f0ddef161781a66a5329f14ea7a",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071420_Qualifying%20LMGT3/23_Analysis_Qualifying%20LMGT3.CSV",
+        "sha256": "7df3f7ec123afb123cf1279a186975607a5f0bfa07bfb860733cdd8e9097392e"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071420_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3.CSV",
+        "sha256": "bb410203476466cbffd088236918dedbd5a498d9cd5e094c8a7417da8ef3832b"
+      },
+      {
+        "session": "202611071420_Qualifying LMGT3",
+        "name": "Classification_Qualifying LMGT3.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071420_Qualifying%20LMGT3/03_Classification_Qualifying%20LMGT3.PDF",
+        "retrieved_at": "2026-11-20T09:39:44.288188+00:00",
+        "sha256": "3bd219f7bc326cc579cd513ea9543638bc7dbfe792bfca5dfd11939ae5984f69"
+      },
+      {
+        "session": "202611071420_Qualifying LMGT3",
+        "name": "TrackLimits_Qualifying LMGT3.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071420_Qualifying%20LMGT3/99_TrackLimits_Qualifying%20LMGT3.CSV",
+        "retrieved_at": "2026-11-20T09:39:44.207068+00:00",
+        "sha256": "63d222c0a0082bac822d7a574d6bf7243f148220e544432e27c5ce541148429f"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 5
+  },
+  {
+    "id": "202611071448_Hyperpole LMGT3",
+    "name": "Hyperpole LMGT3",
+    "file": "202611071448_Hyperpole LMGT3.html",
+    "cars": 10,
+    "observed_laps": 60,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "e0720e69d4befece42b93e0f30009ecd595252861ca749ce87fdadafaf1a6332",
+    "report_sha256": "d3ace8dd39bc060e43819ff5f93e252c73c9756baa24e08b29cfc20bd14f5105",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071448_Hyperpole%20LMGT3/23_Analysis_Hyperpole%20LMGT3.CSV",
+        "sha256": "d1ad6010f918bf3f3230669870c6e8dd7d00666e08c7ceace1c8cbb89e0851d1"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071448_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3.CSV",
+        "sha256": "c172d0b3d0d9657cbe579209d5b41e8e4430baabf9ae788ee240ed31b60caae5"
+      },
+      {
+        "session": "202611071448_Hyperpole LMGT3",
+        "name": "Classification_Hyperpole LMGT3.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071448_Hyperpole%20LMGT3/03_Classification_Hyperpole%20LMGT3.PDF",
+        "retrieved_at": "2026-11-20T09:39:44.723217+00:00",
+        "sha256": "01a424a794103ed65eac69893156c1aaa68021045da731286229face03599b70"
+      },
+      {
+        "session": "202611071448_Hyperpole LMGT3",
+        "name": "TrackLimits_Hyperpole LMGT3.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071448_Hyperpole%20LMGT3/99_TrackLimits_Hyperpole%20LMGT3.CSV",
+        "retrieved_at": "2026-11-20T09:39:44.654213+00:00",
+        "sha256": "65f50f64e8b10644ac49aa57cca17c915c23cafd1bc686110e95b02551e56fdc"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 3
+  },
+  {
+    "id": "202611071505_Qualifying HYPERCAR",
+    "name": "Qualifying HYPERCAR",
+    "file": "202611071505_Qualifying HYPERCAR.html",
+    "cars": 17,
+    "observed_laps": 124,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "aafd8f56574101e420a4076fe203abf83db7100e0011effb0302bd1f14e71282",
+    "report_sha256": "98feafc275d6bea7aee833659b3cbb7ae25ceceecba3c329c69d6e3bf2081419",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071505_Qualifying%20HYPERCAR/23_Analysis_Qualifying%20HYPERCAR.CSV",
+        "sha256": "772f872de69e77b290e4ea38973671ce8dc8407a02df7741974b27400b081ff5"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071505_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR.CSV",
+        "sha256": "63cd31f1f29baeb0f0d600daa6990dd2103b4228599e3ac5fb1c11778caa8463"
+      },
+      {
+        "session": "202611071505_Qualifying HYPERCAR",
+        "name": "Classification_Qualifying HYPERCAR.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071505_Qualifying%20HYPERCAR/03_Classification_Qualifying%20HYPERCAR.PDF",
+        "retrieved_at": "2026-11-20T09:39:45.011241+00:00",
+        "sha256": "5acd61674b178854772277d17be863f9080cf16d8cbd8ed1edaa214f97ffe1c0"
+      },
+      {
+        "session": "202611071505_Qualifying HYPERCAR",
+        "name": "TrackLimits_Qualifying HYPERCAR.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071505_Qualifying%20HYPERCAR/99_TrackLimits_Qualifying%20HYPERCAR.CSV",
+        "retrieved_at": "2026-11-20T09:39:44.715433+00:00",
+        "sha256": "5f0e2cd34e5e1b75ee8ed2f1b4ac37a8f00f4afca05e916d217ba30e8dc860d5"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 1
+  },
+  {
+    "id": "202611071525_Hyperpole HYPERCAR",
+    "name": "Hyperpole HYPERCAR",
+    "file": "202611071525_Hyperpole HYPERCAR.html",
+    "cars": 10,
+    "observed_laps": 61,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "8c353782c283a5653c031afd4d215aebb946ac0e50c4c900f75cca8ea77998d8",
+    "report_sha256": "9c7c4eac3130cf28ed945e118dfeddef5c28b1bfca332ee493e1159cdf84d4b8",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071525_Hyperpole%20HYPERCAR/23_Analysis_Hyperpole%20HYPERCAR.CSV",
+        "sha256": "19c03408b905c0910f805ab4df73cefddb9507d1567d2126cc46a0694eeb3550"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071525_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR.CSV",
+        "sha256": "37cbf6b7de6ca719d359fd4e4c330f7211e2e0ca6dbb579f6b50eb6504a26f4d"
+      },
+      {
+        "session": "202611071525_Hyperpole HYPERCAR",
+        "name": "Classification_Hyperpole HYPERCAR.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071525_Hyperpole%20HYPERCAR/03_Classification_Hyperpole%20HYPERCAR.PDF",
+        "retrieved_at": "2026-11-20T09:39:45.479702+00:00",
+        "sha256": "3443359460d8116f50550839f3d181aa133f391198dd199d0d13b6f5e7f64827"
+      },
+      {
+        "session": "202611071525_Hyperpole HYPERCAR",
+        "name": "TrackLimits_Hyperpole HYPERCAR.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611071525_Hyperpole%20HYPERCAR/99_TrackLimits_Hyperpole%20HYPERCAR.CSV",
+        "retrieved_at": "2026-11-20T09:39:45.106607+00:00",
+        "sha256": "2343def1bfe98145c966432679f027a5d76ec42368bf55c5f204354167de859f"
+      }
+    ],
+    "lap_count_discrepancies": [],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 1
+  },
+  {
+    "id": "202611081100_Race",
+    "name": "Race",
+    "file": "202611081100_Race.html",
+    "cars": 35,
+    "observed_laps": 5660,
+    "classification_status": "Final Classification",
+    "source_fingerprint": "abc2b0f9e023a2a59919938d2acc34e9037f83d1c220d0dc1449812fdf182961",
+    "report_sha256": "d845d2f6214bbe724727c7747dfe14b6f2634e753426f43ba6a453bf201796ee",
+    "sources": [
+      {
+        "name": "analysis.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611081100_Race/06_Hour%206/23_Analysis_Race_Hour%206.CSV",
+        "sha256": "462d22bcec3e18cf2792d162aa6890d8136be8a337b3f63a67b254b79d308663"
+      },
+      {
+        "name": "classification.csv",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611081100_Race/06_Hour%206/03_Classification_Race_Hour%206.CSV",
+        "sha256": "4e78fa45ebb839afa1e7e59a0df890aca612b153aac966b460254ac8b8c2fefd"
+      },
+      {
+        "session": "202611081100_Race",
+        "name": "Classification_Race_Hour 6.PDF",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611081100_Race/06_Hour%206/03_Classification_Race_Hour%206.PDF",
+        "retrieved_at": "2026-11-20T09:39:45.838175+00:00",
+        "sha256": "7ca99e9ab29f443488431a73c4d51075722d19d62b95636d989853bc1f7fd43a"
+      },
+      {
+        "session": "202611081100_Race",
+        "name": "TrackLimits_Race_Hour 6.CSV",
+        "url": "https://files.alkamelcloud.com/wec/results/15_2026/08_AUTODROMO%20NAZIONALE%20DI%20MONZA/689_FIA%20WEC/202611081100_Race/06_Hour%206/99_TrackLimits_Race_Hour%206.CSV",
+        "retrieved_at": "2026-11-20T09:39:45.544672+00:00",
+        "sha256": "65f298e4b543cacf4a90c0f2ba5a3b7c51d8f8eea646870dcba1a1629cb102f8"
+      }
+    ],
+    "lap_count_discrepancies": [
+      [
+        "007",
+        191,
+        190,
+        1
+      ]
+    ],
+    "excluded_outlaps": 0,
+    "excluded_tracklimits": 62
+  }
+]

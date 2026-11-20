@@ -1,0 +1,39 @@
+{
+  "reports": 8,
+  "passed": true,
+  "errors": [],
+  "external": 0,
+  "timeWindow": [
+    {
+      "n": 22,
+      "median": 95.97
+    },
+    {
+      "n": 21,
+      "median": 96.068
+    }
+  ],
+  "savedCopy": true,
+  "eventTabs": true,
+  "mobile": "390x844",
+  "wec_unit_tests": {
+    "passed": 13
+  },
+  "full_suite": {
+    "total": 50,
+    "passed": 47,
+    "failures": 1,
+    "errors": 2,
+    "unchanged_HEAD_reproduction": "The same 3 tests fail on unmodified HEAD: temporary SQLite file locks (2), repair-push fixture (1)."
+  },
+  "source_sha256s": {
+    "202611061030_Free Practice 1.html": "30b144dae7980acc555291017f4e4ec5ccb5c320e19feb1330d21654fceaa360",
+    "202611061430_Free Practice 2.html": "3953e1685db6771cf4cf7067c623e0f0fd2630fe6e70403d37d71621c91852cd",
+    "202611071030_Free Practice 3.html": "9bafa42ef5da41f768e86418215657aa04c68049db111c5c16fda46f2f2cdab0",
+    "202611071420_Qualifying LMGT3.html": "48b6dce41a4ac0c5aea91086ed5b2c9fb1904f0ddef161781a66a5329f14ea7a",
+    "202611071448_Hyperpole LMGT3.html": "d3ace8dd39bc060e43819ff5f93e252c73c9756baa24e08b29cfc20bd14f5105",
+    "202611071505_Qualifying HYPERCAR.html": "98feafc275d6bea7aee833659b3cbb7ae25ceceecba3c329c69d6e3bf2081419",
+    "202611071525_Hyperpole HYPERCAR.html": "9c7c4eac3130cf28ed945e118dfeddef5c28b1bfca332ee493e1159cdf84d4b8",
+    "202611081100_Race.html": "d845d2f6214bbe724727c7747dfe14b6f2634e753426f43ba6a453bf201796ee"
+  }
+}

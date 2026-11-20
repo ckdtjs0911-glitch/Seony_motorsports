@@ -186,10 +186,12 @@ def page(title, body):
             f'<h1>{html.escape(title)}</h1>{body}</html>')
 
 
-def render(entry, rows, sources, classification=None):
+def render(entry, rows, sources, classification=None, insight_context=None):
+    from wec_insights import render as render_insights
     esc = html.escape
     summaries = summarize(rows)
-    body = '<a href="../../index.html">WEC 목록</a> · <a href="laps.json">랩 JSON</a><p>'
+    body = render_insights(entry, rows, classification, insight_context)
+    body += '<a href="../../index.html">WEC 목록</a> · <a href="laps.json">랩 JSON</a><p>'
     body += '공식 CSV 관측 기록. 순위·최종 결과를 추정하지 않습니다. 중앙값은 첫 랩·피트 진입·피트 시간 기록 랩을 제외하고 GF/FF 랩만 사용합니다. '
     body += '플래그는 결승선 통과 시점 정보이며 랩 전체의 그린 상태를 보장하지 않습니다. 연료·트래픽·타이어 보정 없음. '
     body += '피트 진입 수는 완료된 정차 횟수와 다르며 첫 출차의 PIT_TIME도 정차로 세지 않습니다.</p>'

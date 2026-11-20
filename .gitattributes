@@ -1,1 +1,2 @@
 *.csv -text whitespace=cr-at-eol
+reports/wec/session-guides/** -text whitespace=cr-at-eol
