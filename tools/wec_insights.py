@@ -69,6 +69,64 @@ def comparison_stats(car, start=0, end=math.inf, segment=None):
                 sd=statistics.pstdev(times) if times else None)
 
 
+def words(value):
+    """Explain a timing value in Korean units rather than assuming m:ss knowledge."""
+    if value is None:
+        return '미제공'
+    hours = int(value // 3600)
+    minutes = int(value % 3600 // 60)
+    sec = value % 60
+    return (f'{hours}시간 ' if hours else '') + (f'{minutes}분 ' if hours or minutes else '') + f'{sec:.3f}초'
+
+
+def explain_records(entry, cars, classification):
+    """Connect this event's actual values to their meaning, without assigning causes."""
+    esc = html.escape
+    race = entry['session'].split('_', 1)[-1].casefold() == 'race'
+    bynumber = {c['number']: c for c in cars}
+    cards = []
+    for category in sorted({r['CLASS'] for r in classification or []}):
+        ranked = [r for r in classification if r['CLASS'] == category and (not race or r.get('STATUS') == 'Classified')]
+        if not ranked:
+            continue
+        a = ranked[0]
+        total = a.get('TIME', a.get('TOTAL_TIME'))
+        paragraphs = []
+        if race:
+            paragraphs.append(f'#{esc(a["NUMBER"])} {esc(a.get("TEAM", ""))}의 <strong>{esc(a.get("LAPS", "—"))}랩</strong>은 공식 분류에 반영된 바퀴 수입니다. 총 시간 <strong>{esc(total or "—")}</strong>는 {words(seconds(total))}로 읽습니다. 한 바퀴의 랩타임과 경기 전체 총 시간을 구별하세요.')
+            if a.get('POS', a.get('POSITION')):
+                paragraphs.append(f'이 차량의 원본 전체 순서는 {esc(a.get("POS", a.get("POSITION")))}위입니다. 여기서는 {esc(category)}의 첫 Classified 행이므로 다른 클래스 차량과 함께 표시된 전체 순서만으로 클래스 성과를 판단하지 않습니다.')
+        else:
+            paragraphs.append(f'#{esc(a["NUMBER"])} {esc(a.get("TEAM", ""))}의 <strong>{esc(total or "—")}</strong>는 이 세션에서 유효한 가장 빠른 한 바퀴가 {words(seconds(total))}였다는 뜻입니다. 모든 랩이 이 속도였다는 뜻은 아닙니다.')
+        if len(ranked) > 1:
+            b = ranked[1]
+            ta, tb = seconds(total), seconds(b.get('TIME', b.get('TOTAL_TIME')))
+            if race:
+                try:
+                    lapgap = int(a['LAPS']) - int(b['LAPS'])
+                except (KeyError, ValueError):
+                    lapgap = None
+                if lapgap == 0 and ta is not None and tb is not None and tb >= ta:
+                    paragraphs.append(f'같은 클래스 #{esc(b["NUMBER"])}도 {esc(b["LAPS"])}랩입니다. <strong>{tb-ta:.3f}초 차이</strong>는 같은 분류 거리를 기록한 두 차량의 공식 총 시간이 {words(tb-ta)} 차이 났다는 의미입니다. 매 랩마다 이만큼 느렸다는 뜻은 아닙니다.')
+                elif lapgap is not None and lapgap > 0:
+                    paragraphs.append(f'클래스 다음 Classified 차량 #{esc(b["NUMBER"])}와는 <strong>{lapgap}랩 차이</strong>입니다. 초 단위 격차가 아니라 완료 거리 차이이며, 임의의 평균 랩타임을 곱해 정확한 시간 차이로 바꾸지 않습니다.')
+                fa, fb = seconds(a.get('FL_TIME')), seconds(b.get('FL_TIME'))
+                if fa is not None and fb is not None and fb < fa:
+                    paragraphs.append(f'그런데 공식 최속 랩은 #{esc(b["NUMBER"])}가 {words(fa-fb)} 더 짧습니다. 가장 빠른 한 랩이 있는 차량과 최종 분류가 앞선 차량이 달라질 수 있는 <strong>이번 경기의 실제 예</strong>입니다. 어느 피트·사건이 승부를 갈랐는지는 이 두 숫자만으로 확정하지 않습니다.')
+            elif ta is not None and tb is not None and tb >= ta:
+                paragraphs.append(f'다음 행 #{esc(b["NUMBER"])}보다 <strong>{tb-ta:.3f}초 짧은 최속</strong>입니다. {words(tb-ta)}의 차이를 겨룬 이 단계의 결과이며, 결승에서 계속 그 차이만큼 빠르다는 예측은 아닙니다.')
+        car = bynumber.get(a['NUMBER'])
+        if car:
+            values = [p['seconds'] for p in car['points'] if p['eligible']]
+            if values:
+                median = statistics.median(values)
+                sd = statistics.pstdev(values)
+                paragraphs.append(f'이 차량의 <strong>세션 전체 참고 표본 {len(values)}랩</strong>의 중앙값은 <strong>{words(median)}</strong>, 표준편차는 {sd:.3f}초입니다. 중앙값은 선택된 랩을 빠른 순서로 정렬했을 때 가운데를 대표하는 시간이고, 표준편차는 그 랩타임이 얼마나 흩어져 있는지를 나타냅니다. 아래 비교기의 선택 시간 범위와는 집계 범위가 다를 수 있습니다.')
+            paragraphs.append(f'원본에서 <strong>피트 진입 표시 {car["pit_entries"]}회</strong>, 인접 관측 랩의 <strong>드라이버 변경 {car["driver_changes"]}회</strong>가 확인됩니다. 전자는 완료 정차·타이어 교체 횟수가 아니며, 후자는 이 데이터에서 보인 운전자 변경 횟수입니다. 실제 정비 내용과 기록 차이의 원인은 추가 확인이 필요합니다.')
+        cards.append('<article><h4>'+esc(category)+' · 실제 수치를 말로 읽기</h4>'+''.join('<p>'+p+'</p>' for p in paragraphs)+'</article>')
+    return '<div class="wec-record-explanations">'+''.join(cards)+'</div>' if cards else '<p>이 세션의 공식 분류가 없어 대회별 결과 숫자에 대한 설명을 만들지 않았습니다. 확인된 랩 비교 범위만 보세요.</p>'
+
+
 def render(entry, rows, classification=None, context=None):
     esc = html.escape
     context = context or {}
@@ -108,6 +166,9 @@ def render(entry, rows, classification=None, context=None):
 <p>{intro} <strong>클래스 → 차량 번호·팀 → 같은 시간대의 연속 랩 → 피트·교대 → 공식 결과</strong> 순서로 보세요.</p>
 <p class="wec-note">자료 범위: {len(classification or [])}개 분류 행 / {len(rows):,}개 관측 랩 · {esc(status)}. 클래스 첫 행은 원본의 순서를 따른 표시이며, 별도의 공식 클래스 순위 필드가 없는 경우 계산한 표시 순서입니다.</p>
 <div class="wec-cards">{''.join(leaders)}</div>
+<h3>이 대회·세션의 숫자는 무슨 뜻일까?</h3>
+<p>아래 설명은 가상의 예가 아니라 <strong>{esc(entry.get('event', '이 대회'))} · {esc(entry['session'].split('_', 1)[-1])}</strong>의 제공된 기록을 사용합니다. 기록 → 쉬운 뜻 → 여기서 단정할 수 없는 점을 순서대로 읽어 보세요.</p>
+{explain_records(entry, cars, classification)}
 <h3>이번 자료에서 확인할 수 있는 기록 포인트</h3>
 <div class="wec-table"><table><thead><tr><th>기록 포인트</th><th>이 보고서에서 보는 방법</th><th>해석 범위</th></tr></thead><tbody>
 <tr><td>클래스·분류 랩·공식 상태</td><td>위 클래스 요약과 아래 공식 분류</td><td>전체/클래스, 관측 랩/분류 랩을 구별합니다.</td></tr>
@@ -125,7 +186,7 @@ def render(entry, rows, classification=None, context=None):
 <label>가로축 <select id="wec-axis"><option value="time">같은 경과 시간(분)</option><option value="relative">주행 구간 안의 랩 순서</option></select></label>
 <label>표시 랩 <select id="wec-sample"><option value="eligible">참고 페이스 표본</option><option value="all">모든 관측 랩</option></select></label>
 <label><input id="wec-smooth" type="checkbox" checked> 연속 5랩 중앙값 선 표시</label><button id="wec-full-time" type="button">전체 시간 범위</button></div>
-<p id="wec-comparison-status" role="status"></p><div id="wec-comparison-chart"></div><div id="wec-comparison-stats"></div>
+<p id="wec-comparison-status" role="status"></p><div id="wec-comparison-explanation"></div><div id="wec-comparison-chart"></div><div id="wec-comparison-stats"></div>
 <p class="wec-note">점은 관측 랩, 선은 같은 주행 구간에서 랩 번호가 연속된 참고 표본 5개의 중앙값입니다. 피트·교대·제외 랩·결측 랩을 건너 연결하지 않습니다. 선택 시간 범위는 각 랩의 결승선 통과 경과 시간 기준입니다. ELAPSED가 없으면 시간 비교에서 제외합니다.</p>
 <p class="wec-note">참고 표본은 첫 랩·피트 진입·PIT_TIME 및 그 다음 출차 랩·자료에서 제외된 랩을 빼고 결승선 GF/FF 기록을 사용합니다. 전체 삭제 랩·중립화 구간을 전수 대조한 그린 페이스가 아닙니다. 타이어 열화·연료량·트래픽·작전 의도는 이 차트만으로 확정할 수 없습니다.</p>
 <h3>확인된 판정과 아직 모르는 것</h3>{penalty}
@@ -145,6 +206,7 @@ const wiFmt=n=>n==null?'—':`${Math.floor(n/60)}:${(n%60).toFixed(3).padStart(6
 function wiSegments(which){const car=wiCars.find(c=>c.number===wiQ('#wec-'+which).value),box=wiQ('#wec-seg-'+which);box.replaceChildren(new Option('전체 구간',''));if(car)for(const s of car.segments)box.add(new Option(`${s.id} · ${s.driver} · Lap ${s.first}–${s.last}`,String(s.id)));}
 function wiClass(){const c=wiCars.filter(c=>c.category===wiQ('#wec-category').value);for(const which of ['a','b']){const s=wiQ('#wec-'+which);s.replaceChildren();for(const car of c)s.add(new Option(`#${car.number} ${car.team}`,car.number));}if(c.length>1)wiQ('#wec-b').selectedIndex=1;wiSegments('a');wiSegments('b');wiDraw();}
 function wiDraw(){
+ wiQ('#wec-comparison-explanation').replaceChildren();
  const a=wiCars.find(c=>c.number===wiQ('#wec-a').value),b=wiCars.find(c=>c.number===wiQ('#wec-b').value),box=wiQ('#wec-comparison-chart');
  if(!a||!b){box.textContent='이 클래스에 비교 가능한 차량 기록이 없습니다.';return;}
  let start=Number(wiQ('#wec-start').value),end=Number(wiQ('#wec-end').value);if(!Number.isFinite(start)||!Number.isFinite(end)||start<0||end<start){box.textContent='종료 경과 분을 시작보다 같거나 크게 입력하세요.';wiQ('#wec-comparison-stats').replaceChildren();wiQ('#wec-comparison-status').textContent='시간 범위를 확인하세요.';return;}
@@ -157,6 +219,7 @@ function wiDraw(){
  if(a.number===b.number)status+=' 같은 차량을 선택했습니다.';
  if(info.every(d=>d.median!=null)&&a.number!==b.number){const delta=info[1].median-info[0].median;status+=` 선택 표본 중앙값 B−A=${delta>=0?'+':''}${delta.toFixed(3)}초. 서로 다른 실제 조건과 표본 수를 보정한 성능 차이는 아닙니다.`;}
  wiQ('#wec-comparison-status').textContent=status;
+ wiQ('#wec-comparison-explanation').innerHTML=info.map(d=>`<p><strong>#${wiEsc(d.car.number)} 기록 읽기:</strong> 선택한 ${start}–${end}분에 관측된 ${d.rows.length}랩 중 참고 표본은 ${d.eligible.length}랩입니다. ${d.median==null?'표본이 없어 대표 랩타임을 계산하지 않았습니다.':`중앙값 ${wiFmt(d.median)}는 ${Math.floor(d.median/60)}분 ${(d.median%60).toFixed(3)}초이며, 표본을 빠른 순으로 놓았을 때 가운데를 대표합니다. 표준편차 ${d.sd.toFixed(3)}초는 이 표본의 랩타임이 흩어진 정도입니다. 수치가 작아도 타이어·연료·교통 조건까지 같았다는 뜻은 아닙니다.`}</p>`).join('')+(info.every(d=>d.median!=null)&&a.number!==b.number?`<p>두 중앙값의 차이는 ${Math.abs(info[1].median-info[0].median).toFixed(3)}초입니다. ${info[0].median===info[1].median?'선택 표본의 중앙값이 같습니다.':`이 표본에서는 #${wiEsc(info[0].median<info[1].median?a.number:b.number)}의 대표 랩타임이 더 짧습니다.`} 이 차이를 매 랩에 곱해 최종 격차나 승패를 예측하지 않습니다.</p>`:'');
  wiQ('#wec-comparison-stats').innerHTML='<div class="wec-table"><table><thead><tr><th>차량</th><th>관측 / 표본 n</th><th>중앙값</th><th>표준편차</th><th>선택 범위 드라이버</th><th>선택 범위 피트 진입 표시</th><th>차량 전체 관측 교대</th><th>선택 범위 결승선 플래그</th></tr></thead><tbody>'+info.map(d=>{const flags={};for(const p of d.rows)flags[p.flag]=(flags[p.flag]||0)+1;return `<tr><td>#${wiEsc(d.car.number)} ${wiEsc(d.car.team)}</td><td>${d.rows.length} / ${d.eligible.length}</td><td>${wiFmt(d.median)}</td><td>${d.sd==null?'—':d.sd.toFixed(3)+'초'}</td><td>${[...new Set(d.rows.map(p=>p.driver))].map(wiEsc).join(' / ')||'—'}</td><td>${d.rows.filter(p=>p.pit).length}</td><td>${d.car.driver_changes}</td><td>${Object.entries(flags).map(([f,n])=>wiEsc(f)+': '+n).join(', ')||'—'}</td></tr>`}).join('')+'</tbody></table></div>';
  if(!data.length){box.textContent='선택 조건의 표시 가능한 랩이 없습니다. 시간 범위나 표본 조건을 바꾸세요.';return;}
  const xval=p=>relative?p.relative:p.t,xlo=relative?1:start,xhi=relative?Math.max(...data.map(xval),2):Math.max(end,start+1),lo=Math.min(...data.map(p=>p.seconds)),hi=Math.max(...data.map(p=>p.seconds)),pad=Math.max((hi-lo)*.08,.2),ylo=lo-pad,yhi=hi+pad,x=n=>85+640*(n-xlo)/(xhi-xlo||1),y=n=>300-255*(n-ylo)/(yhi-ylo);

@@ -17,23 +17,17 @@
   "eventTabs": true,
   "mobile": "390x844",
   "wec_unit_tests": {
-    "passed": 13
-  },
-  "full_suite": {
-    "total": 50,
-    "passed": 47,
-    "failures": 1,
-    "errors": 2,
-    "unchanged_HEAD_reproduction": "The same 3 tests fail on unmodified HEAD: temporary SQLite file locks (2), repair-push fixture (1)."
+    "passed": 15
   },
   "source_sha256s": {
-    "202611061030_Free Practice 1.html": "30b144dae7980acc555291017f4e4ec5ccb5c320e19feb1330d21654fceaa360",
-    "202611061430_Free Practice 2.html": "3953e1685db6771cf4cf7067c623e0f0fd2630fe6e70403d37d71621c91852cd",
-    "202611071030_Free Practice 3.html": "9bafa42ef5da41f768e86418215657aa04c68049db111c5c16fda46f2f2cdab0",
-    "202611071420_Qualifying LMGT3.html": "48b6dce41a4ac0c5aea91086ed5b2c9fb1904f0ddef161781a66a5329f14ea7a",
-    "202611071448_Hyperpole LMGT3.html": "d3ace8dd39bc060e43819ff5f93e252c73c9756baa24e08b29cfc20bd14f5105",
-    "202611071505_Qualifying HYPERCAR.html": "98feafc275d6bea7aee833659b3cbb7ae25ceceecba3c329c69d6e3bf2081419",
-    "202611071525_Hyperpole HYPERCAR.html": "9c7c4eac3130cf28ed945e118dfeddef5c28b1bfca332ee493e1159cdf84d4b8",
-    "202611081100_Race.html": "d845d2f6214bbe724727c7747dfe14b6f2634e753426f43ba6a453bf201796ee"
-  }
+    "202611061030_Free Practice 1.html": "499a012c672bb3f5756dfd022c8c4ddd2f2f090166d0e6682298ba1ba7e2581d",
+    "202611061430_Free Practice 2.html": "c3ea98f69d7de18df701a2576293db0741adb9291794c33c89c207510b734d44",
+    "202611071030_Free Practice 3.html": "2c549f0e55b61eea64c427af91e1bf9c4880f5e54604598bd5d536c09733acc8",
+    "202611071420_Qualifying LMGT3.html": "da89b36e860852d8674afbd5cf72445e4a82e0711c3a94515682552d49217dab",
+    "202611071448_Hyperpole LMGT3.html": "c8518815775ff12bd58910b47b0a37686612e1a4d3a7c25125c84b9b059ea322",
+    "202611071505_Qualifying HYPERCAR.html": "c24f1d14f9f816352b052ec4e0af8efc6c5e43f8ad37f2a091e4892dc156ca63",
+    "202611071525_Hyperpole HYPERCAR.html": "6f2a2a6b4c63d38f8968fc7f49fe6df838d15d0efa1c79de3fdf9eac084543dd",
+    "202611081100_Race.html": "25febb83fdd7e70755da56df4c24046ce8d4b27d8cdf04d8f59c3c6ecf157b78"
+  },
+  "record_explanations": "Actual session records, Korean time units, class gap, best lap versus race result, and dynamic selected-sample explanations."
 }

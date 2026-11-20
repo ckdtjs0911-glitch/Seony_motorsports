@@ -1,9 +1,31 @@
 import unittest
 
-from wec_insights import prepare, comparison_stats, render, seconds
+from wec_insights import prepare, comparison_stats, render, seconds, explain_records, words
 
 
 class InsightTests(unittest.TestCase):
+    def test_actual_record_explanations_distinguish_gap_and_fastest_lap(self):
+        results = [dict(NUMBER='38', CLASS='HYPERCAR', TEAM='A', STATUS='Classified', LAPS='191', TIME="6:01'33.199", FL_TIME="1'34.874"),
+                   dict(NUMBER='36', CLASS='HYPERCAR', TEAM='B', STATUS='Classified', LAPS='191', TIME="6:01'38.806", FL_TIME="1'34.699")]
+        output = explain_records({'session': '202611081100_Race'}, [], results)
+        self.assertIn('5.607초 차이', output)
+        self.assertIn('0.175초', output)
+        self.assertIn('매 랩마다', output)
+        self.assertIn('확정하지 않습니다', output)
+        results[1]['LAPS'] = '190'
+        output = explain_records({'session': '202611081100_Race'}, [], results)
+        self.assertIn('1랩 차이', output)
+        self.assertNotIn('5.607초 차이', output)
+        self.assertEqual(words(seconds("6:01'33.199")), '6시간 1분 33.199초')
+
+    def test_practice_explains_best_lap_without_race_prediction(self):
+        results = [dict(NUMBER='1', CLASS='HYPERCAR', TIME="1'30.000"),
+                   dict(NUMBER='2', CLASS='HYPERCAR', TIME="1'30.100")]
+        output = explain_records({'session': '202611061030_Free Practice 1'}, [], results)
+        self.assertIn('0.100초 짧은 최속', output)
+        self.assertIn('모든 랩이 이 속도', output)
+        self.assertIn('예측은 아닙니다', output)
+
     def row(self, number, lap, elapsed, value=90, **extra):
         return dict(NUMBER=number, LAP_NUMBER=str(lap), ELAPSED=elapsed,
                     DRIVER_NAME='A', CLASS='HYPERCAR', TEAM='Team', seconds=value,
